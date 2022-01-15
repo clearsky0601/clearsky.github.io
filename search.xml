@@ -3,17 +3,17 @@
   <entry>
     <title>linux命令</title>
     <url>/2022/01/11/linux%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h1 id="Linux入门"><a href="#Linux入门" class="headerlink" title="Linux入门"></a>Linux入门</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>Linux内核最初只是由芬兰人林纳斯·托瓦兹（Linus Torvalds）在赫尔辛基大学上学时出于个人爱好而编写的。</p>
+    <content><![CDATA[<h1 id="Linux入门"><a href="#Linux入门" class="headerlink" title="Linux入门"></a>Linux入门</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>Linux内核最初只是由<u>芬兰人</u><strong>林纳斯·托瓦兹</strong>（Linus Torvalds）在赫尔辛基大学上学时出于个人爱好而编写的。</p>
 <p>Linux是一套免费使用和自由传播的类Unix操作系统，是一个基于POSIX和UNIX的多用户、多任务、支持多线程和多CPU的操作系统。Linux能运行主要的UNIX工具软件、应用程序和网络协议。它支持32位和64位硬件。Linux继承了Unix以网络为核心的设计思想，是一个性能稳定的多用户网络操作系统。</p>
 <p>目前市面上较知名的发行版有：Ubuntu、RedHat、CentOS、Debain、Fedora、SuSE、OpenSUSE。</p>
 <h2 id="与Windows的区别"><a href="#与Windows的区别" class="headerlink" title="与Windows的区别"></a>与Windows的区别</h2><h1 id="安装使用"><a href="#安装使用" class="headerlink" title="安装使用"></a>安装使用</h1><h1 id="Linux文件与目录结构"><a href="#Linux文件与目录结构" class="headerlink" title="Linux文件与目录结构"></a>Linux文件与目录结构</h1><h2 id="Linux文件"><a href="#Linux文件" class="headerlink" title="Linux文件"></a>Linux文件</h2><p>Linux系统中一切皆文件。</p>
 <p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/d0c50-linux2bfile2bsystem2bhierarchy.jpg" alt="img"></p>
 <ul>
-<li><p><strong>/bin</strong>：<br>bin 是 Binaries (二进制文件) 的缩写, 这个目录存放着最经常使用的命令。</p>
+<li><p><strong>/bin</strong>：<br>bin (Binaries 二进制文件) 的缩写,<br>存放着最经常使用的命令。</p>
 </li>
-<li><p><strong>/boot：</strong><br>这里存放的是启动 Linux 时使用的一些核心文件，包括一些连接文件以及镜像文件。</p>
+<li><p><strong>/boot：</strong><br>启动时使用的一些核心文件，包括一些连接文件以及镜像文件。</p>
 </li>
-<li><p><strong>/dev ：</strong><br>dev 是 Device(设备) 的缩写, 该目录下存放的是 Linux 的外部设备，在 Linux 中访问设备的方式和访问文件的方式是相同的。</p>
+<li><p><strong>/dev ：</strong><br>dev 是 Device(设备) 的缩写,<br>存放的是 Linux 的外部设备，在 Linux 中访问设备的方式和访问文件的方式是相同的。</p>
 </li>
 <li><p><strong>/etc：</strong><br>etc 是 Etcetera(等等) 的缩写,这个目录用来存放系<strong>统管理所需要的配置文件</strong>。</p>
 </li>
