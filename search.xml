@@ -2246,8 +2246,370 @@ mystr2 <span class="token operator">=</span> <span class="token string">'     '<
 </ul>
 </li>
 </ul>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><ul>
+<li>列表的格式</li>
+<li>列表的常用操作</li>
+<li>列表的循环遍历</li>
+<li>列表的嵌套使用</li>
+</ul>
+<h3 id="列表概述"><a href="#列表概述" class="headerlink" title="列表概述"></a>列表概述</h3><p>格式</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token punctuation">[</span>数据<span class="token number">1</span><span class="token punctuation">,</span> 数据<span class="token number">2</span><span class="token punctuation">,</span> 数据<span class="token number">3</span><span class="token punctuation">,</span> 数据<span class="token number">4.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>列表可以一次性存储多个数据，且<u>可以为不同数据类型</u>。</p>
+<h3 id="列表的常用操作"><a href="#列表的常用操作" class="headerlink" title="列表的常用操作"></a>列表的常用操作</h3><p>列表的作用是一次性存储多个数据，程序员可以对这些数据进行的操作有：增、删、改、查。</p>
+<h4 id="查找-1"><a href="#查找-1" class="headerlink" title="查找"></a>查找</h4><h5 id="下标"><a href="#下标" class="headerlink" title="下标"></a>下标</h5><pre class="line-numbers language-python" data-language="python"><code class="language-python">name_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Tom'</span><span class="token punctuation">,</span> <span class="token string">'Lily'</span><span class="token punctuation">,</span> <span class="token string">'Rose'</span><span class="token punctuation">]</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>name_list<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># Tom</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>name_list<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># Lily</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>name_list<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># Rose</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h5 id="查找的相关函数"><a href="#查找的相关函数" class="headerlink" title="查找的相关函数"></a><strong>查找的相关函数</strong></h5><ul>
+<li>查下标：index()：返回指定数据所在位置的下标 。</li>
+</ul>
+<p>语法：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">列表序列<span class="token punctuation">.</span>index<span class="token punctuation">(</span>数据<span class="token punctuation">,</span> 开始位置下标<span class="token punctuation">,</span> 结束位置下标<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">name_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Tom'</span><span class="token punctuation">,</span> <span class="token string">'Lily'</span><span class="token punctuation">,</span> <span class="token string">'Rose'</span><span class="token punctuation">]</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>name_list<span class="token punctuation">.</span>index<span class="token punctuation">(</span><span class="token string">'Lily'</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>注意：如果查找的数据不存在则报错。</p>
+</blockquote>
+<ul>
+<li>查出现次数：count()：统计指定数据在当前列表中出现的次数。</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">name_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Tom'</span><span class="token punctuation">,</span> <span class="token string">'Lily'</span><span class="token punctuation">,</span> <span class="token string">'Rose'</span><span class="token punctuation">]</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>name_list<span class="token punctuation">.</span>count<span class="token punctuation">(</span><span class="token string">'Lily'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>查列表表长：len()：访问列表长度，即列表中数据的个数。</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">name_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Tom'</span><span class="token punctuation">,</span> <span class="token string">'Lily'</span><span class="token punctuation">,</span> <span class="token string">'Rose'</span><span class="token punctuation">]</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>name_list<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 3</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h5 id="判断是否存在"><a href="#判断是否存在" class="headerlink" title="判断是否存在"></a>判断是否存在</h5><ul>
+<li>in：判断指定数据在某个列表序列，如果在返回True，否则返回False</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">name_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Tom'</span><span class="token punctuation">,</span> <span class="token string">'Lily'</span><span class="token punctuation">,</span> <span class="token string">'Rose'</span><span class="token punctuation">]</span>
+
+<span class="token comment"># 结果：True</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Lily'</span> <span class="token keyword">in</span> name_list<span class="token punctuation">)</span>
+
+<span class="token comment"># 结果：False</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Lilys'</span> <span class="token keyword">in</span> name_list<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<ul>
+<li>not in：判断指定数据不在某个列表序列，如果不在返回True，否则返回False</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">name_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Tom'</span><span class="token punctuation">,</span> <span class="token string">'Lily'</span><span class="token punctuation">,</span> <span class="token string">'Rose'</span><span class="token punctuation">]</span>
+
+<span class="token comment"># 结果：False</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Lily'</span> <span class="token keyword">not</span> <span class="token keyword">in</span> name_list<span class="token punctuation">)</span>
+
+<span class="token comment"># 结果：True</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Lilys'</span> <span class="token keyword">not</span> <span class="token keyword">in</span> name_list<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>体验案例</li>
+</ul>
+<p>需求：查找用户输入的名字是否已经存在。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">name_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Tom'</span><span class="token punctuation">,</span> <span class="token string">'Lily'</span><span class="token punctuation">,</span> <span class="token string">'Rose'</span><span class="token punctuation">]</span>
+
+name <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'请输入您要搜索的名字：'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> name <span class="token keyword">in</span> name_list<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'您输入的名字是</span><span class="token interpolation"><span class="token punctuation">&#123;</span>name<span class="token punctuation">&#125;</span></span><span class="token string">, 名字已经存在'</span></span><span class="token punctuation">)</span>
+<span class="token keyword">else</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'您输入的名字是</span><span class="token interpolation"><span class="token punctuation">&#123;</span>name<span class="token punctuation">&#125;</span></span><span class="token string">, 名字不存在'</span></span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="增加"><a href="#增加" class="headerlink" title="增加"></a>增加</h4><p>作用：增加指定数据到列表中。</p>
+<ul>
+<li>append()：列表结尾追加数据。</li>
+</ul>
+<ol>
+<li>语法</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">列表序列<span class="token punctuation">.</span>append<span class="token punctuation">(</span>数据<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ol start="2">
+<li>体验</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">name_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Tom'</span><span class="token punctuation">,</span> <span class="token string">'Lily'</span><span class="token punctuation">,</span> <span class="token string">'Rose'</span><span class="token punctuation">]</span>
+
+name_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">'xiaoming'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 结果：['Tom', 'Lily', 'Rose', 'xiaoming']</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>name_list<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>!、、<a href="02-%E5%88%97%E8%A1%A8.assets/image-20190130160154636.png">image-20190130160154636</a></p>
+<blockquote>
+<p>列表追加数据的时候，直接在原列表里面追加了指定数据，即修改了原列表，故列表为可变类型数据。</p>
+</blockquote>
+<ol start="3">
+<li>注意点</li>
+</ol>
+<p>如果append()追加的数据是一个序列，则追加整个序列到列表</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">name_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Tom'</span><span class="token punctuation">,</span> <span class="token string">'Lily'</span><span class="token punctuation">,</span> <span class="token string">'Rose'</span><span class="token punctuation">]</span>
+
+name_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'xiaoming'</span><span class="token punctuation">,</span> <span class="token string">'xiaohong'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 结果：['Tom', 'Lily', 'Rose', ['xiaoming', 'xiaohong']]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>name_list<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<ul>
+<li>extend()：列表结尾追加数据，如果数据是一个序列，则将这个序列的数据逐一添加到列表。</li>
+</ul>
+<ol>
+<li>语法</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">列表序列<span class="token punctuation">.</span>extend<span class="token punctuation">(</span>数据<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ol start="2">
+<li><p>快速体验</p>
+<p>2.1 单个数据</p>
+</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">name_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Tom'</span><span class="token punctuation">,</span> <span class="token string">'Lily'</span><span class="token punctuation">,</span> <span class="token string">'Rose'</span><span class="token punctuation">]</span>
+
+name_list<span class="token punctuation">.</span>extend<span class="token punctuation">(</span><span class="token string">'xiaoming'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 结果：['Tom', 'Lily', 'Rose', 'x', 'i', 'a', 'o', 'm', 'i', 'n', 'g']</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>name_list<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>​    2.2 序列数据</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">name_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Tom'</span><span class="token punctuation">,</span> <span class="token string">'Lily'</span><span class="token punctuation">,</span> <span class="token string">'Rose'</span><span class="token punctuation">]</span>
+
+name_list<span class="token punctuation">.</span>extend<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'xiaoming'</span><span class="token punctuation">,</span> <span class="token string">'xiaohong'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 结果：['Tom', 'Lily', 'Rose', 'xiaoming', 'xiaohong']</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>name_list<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<ul>
+<li>insert()：指定位置新增数据。</li>
+</ul>
+<ol>
+<li>语法</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">列表序列<span class="token punctuation">.</span>insert<span class="token punctuation">(</span>位置下标<span class="token punctuation">,</span> 数据<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ol start="2">
+<li>快速体验</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">name_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Tom'</span><span class="token punctuation">,</span> <span class="token string">'Lily'</span><span class="token punctuation">,</span> <span class="token string">'Rose'</span><span class="token punctuation">]</span>
+
+name_list<span class="token punctuation">.</span>insert<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'xiaoming'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 结果：['Tom', 'xiaoming', 'Lily', 'Rose']</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>name_list<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h4><ul>
+<li>del</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">del</span> 目标<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+<p>删除列表</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">name_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Tom'</span><span class="token punctuation">,</span> <span class="token string">'Lily'</span><span class="token punctuation">,</span> <span class="token string">'Rose'</span><span class="token punctuation">]</span>
+
+<span class="token comment"># 结果：报错提示：name 'name_list' is not defined</span>
+<span class="token keyword">del</span> name_list
+<span class="token keyword">print</span><span class="token punctuation">(</span>name_list<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>删除指定数据</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">name_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Tom'</span><span class="token punctuation">,</span> <span class="token string">'Lily'</span><span class="token punctuation">,</span> <span class="token string">'Rose'</span><span class="token punctuation">]</span>
+
+<span class="token keyword">del</span> name_list<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+
+<span class="token comment"># 结果：['Lily', 'Rose']</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>name_list<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<ul>
+<li>pop()：删除指定下标的数据(默认为最后一个)，并返回该数据。</li>
+</ul>
+<ol>
+<li>语法</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">列表序列<span class="token punctuation">.</span>pop<span class="token punctuation">(</span>下标<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ol start="2">
+<li>快速体验</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">name_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Tom'</span><span class="token punctuation">,</span> <span class="token string">'Lily'</span><span class="token punctuation">,</span> <span class="token string">'Rose'</span><span class="token punctuation">]</span>
+
+del_name <span class="token operator">=</span> name_list<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 结果：Lily</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>del_name<span class="token punctuation">)</span>
+
+<span class="token comment"># 结果：['Tom', 'Rose']</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>name_list<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<ul>
+<li>remove()：移除列表中某个数据的第一个匹配项。</li>
+</ul>
+<ol>
+<li>语法</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">列表序列<span class="token punctuation">.</span>remove<span class="token punctuation">(</span>数据<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ol start="2">
+<li>快速体验</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">name_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Tom'</span><span class="token punctuation">,</span> <span class="token string">'Lily'</span><span class="token punctuation">,</span> <span class="token string">'Rose'</span><span class="token punctuation">]</span>
+
+name_list<span class="token punctuation">.</span>remove<span class="token punctuation">(</span><span class="token string">'Rose'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 结果：['Tom', 'Lily']</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>name_list<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<ul>
+<li>clear()：清空列表</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">name_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Tom'</span><span class="token punctuation">,</span> <span class="token string">'Lily'</span><span class="token punctuation">,</span> <span class="token string">'Rose'</span><span class="token punctuation">]</span>
+
+name_list<span class="token punctuation">.</span>clear<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>name_list<span class="token punctuation">)</span> <span class="token comment"># 结果： []</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="修改-1"><a href="#修改-1" class="headerlink" title="修改"></a>修改</h4><ul>
+<li>修改指定下标数据</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">name_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Tom'</span><span class="token punctuation">,</span> <span class="token string">'Lily'</span><span class="token punctuation">,</span> <span class="token string">'Rose'</span><span class="token punctuation">]</span>
+
+name_list<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'aaa'</span>
+
+<span class="token comment"># 结果：['aaa', 'Lily', 'Rose']</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>name_list<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<ul>
+<li>逆置：reverse()</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">num_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">]</span>
+
+num_list<span class="token punctuation">.</span>reverse<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 结果：[8, 6, 3, 2, 5, 1]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>num_list<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<ul>
+<li>排序：sort()</li>
+</ul>
+<ol>
+<li>语法</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">列表序列<span class="token punctuation">.</span>sort<span class="token punctuation">(</span> key<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> reverse<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<blockquote>
+<p>注意：reverse表示排序规则，<strong>reverse = True</strong> 降序， <strong>reverse = False</strong> 升序（默认）</p>
+</blockquote>
+<ol start="2">
+<li>快速体验</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">num_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">]</span>
+
+num_list<span class="token punctuation">.</span>sort<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 结果：[1, 2, 3, 5, 6, 8]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>num_list<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="复制"><a href="#复制" class="headerlink" title="复制"></a>复制</h4><p>函数：copy()</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">name_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Tom'</span><span class="token punctuation">,</span> <span class="token string">'Lily'</span><span class="token punctuation">,</span> <span class="token string">'Rose'</span><span class="token punctuation">]</span>
+
+name_li2 <span class="token operator">=</span> name_list<span class="token punctuation">.</span>copy<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 结果：['Tom', 'Lily', 'Rose']</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>name_li2<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="列表的循环遍历"><a href="#列表的循环遍历" class="headerlink" title="列表的循环遍历"></a>列表的循环遍历</h3><p>需求：依次打印列表中的各个数据。</p>
+<h4 id="while"><a href="#while" class="headerlink" title="while"></a>while</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">name_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Tom'</span><span class="token punctuation">,</span> <span class="token string">'Lily'</span><span class="token punctuation">,</span> <span class="token string">'Rose'</span><span class="token punctuation">]</span>
+
+i <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">while</span> i <span class="token operator">&lt;</span> <span class="token builtin">len</span><span class="token punctuation">(</span>name_list<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>name_list<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    i <span class="token operator">+=</span> <span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="for"><a href="#for" class="headerlink" title="for"></a>for</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">name_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Tom'</span><span class="token punctuation">,</span> <span class="token string">'Lily'</span><span class="token punctuation">,</span> <span class="token string">'Rose'</span><span class="token punctuation">]</span>
+
+<span class="token keyword">for</span> i <span class="token keyword">in</span> name_list<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="列表嵌套"><a href="#列表嵌套" class="headerlink" title="列表嵌套"></a>列表嵌套</h3><p>所谓列表嵌套指的就是一个列表里面包含了其他的子列表。</p>
+<p>应用场景：要存储班级一、二、三三个班级学生姓名，且每个班级的学生姓名在一个列表。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">name_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'小明'</span><span class="token punctuation">,</span> <span class="token string">'小红'</span><span class="token punctuation">,</span> <span class="token string">'小绿'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'Tom'</span><span class="token punctuation">,</span> <span class="token string">'Lily'</span><span class="token punctuation">,</span> <span class="token string">'Rose'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'张三'</span><span class="token punctuation">,</span> <span class="token string">'李四'</span><span class="token punctuation">,</span> <span class="token string">'王五'</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<blockquote>
+<p>思考： 如何查找到数据”李四”？</p>
+</blockquote>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 第一步：按下标查找到李四所在的列表</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>name_list<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 第二步：从李四所在的列表里面，再按下标找到数据李四</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>name_list<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<h3 id="小结-1"><a href="#小结-1" class="headerlink" title="小结"></a>小结</h3><ul>
+<li>列表的格式</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token punctuation">[</span>数据<span class="token number">1</span><span class="token punctuation">,</span> 数据<span class="token number">2</span><span class="token punctuation">,</span> 数据<span class="token number">3</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ul>
+<li>常用操作方法<ul>
+<li>index()</li>
+<li>len()</li>
+<li>append()</li>
+<li>pop()</li>
+<li>remove()</li>
+</ul>
+</li>
+<li>列表嵌套</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">name_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'小明'</span><span class="token punctuation">,</span> <span class="token string">'小红'</span><span class="token punctuation">,</span> <span class="token string">'小绿'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'Tom'</span><span class="token punctuation">,</span> <span class="token string">'Lily'</span><span class="token punctuation">,</span> <span class="token string">'Rose'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'张三'</span><span class="token punctuation">,</span> <span class="token string">'李四'</span><span class="token punctuation">,</span> <span class="token string">'王五'</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+name_list<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
+
+
+
+
 <h2 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h2><p>一个元组可以存储多个数据，元组内的数据是<u><strong>不能修改</strong></u>的。</p>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><h2 id="公共操作"><a href="#公共操作" class="headerlink" title="公共操作"></a>公共操作</h2><h2 id="推导式"><a href="#推导式" class="headerlink" title="推导式"></a>推导式</h2><h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h3 id="函数概述"><a href="#函数概述" class="headerlink" title="函数概述"></a>函数概述</h3><p>—函数的作用</p>
+<h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><h2 id="公共操作"><a href="#公共操作" class="headerlink" title="公共操作"></a>公共操作</h2><h2 id="推导式"><a href="#推导式" class="headerlink" title="推导式"></a>推导式</h2><h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h3 id="函数概述"><a href="#函数概述" class="headerlink" title="函数概述"></a>函数概述</h3><p>—函数的作用</p>
 <p>2二函数的使用步骤</p>
 <p>三函数的参数作用</p>
 <p>&gt;四函数的返回值作用</p>
@@ -2580,7 +2942,7 @@ file_list <span class="token operator">=</span> os<span class="token punctuation
 
 
 
-<h2 id="小结-1"><a href="#小结-1" class="headerlink" title="小结"></a>小结</h2><ul>
+<h2 id="小结-2"><a href="#小结-2" class="headerlink" title="小结"></a>小结</h2><ul>
 <li><p>文件操作步骤</p>
 <ul>
 <li>打开</li>
@@ -2688,6 +3050,44 @@ file_list <span class="token operator">=</span> os<span class="token punctuation
   <entry>
     <title>线代基础-行列式</title>
     <url>/2022/01/16/%E7%BA%BF%E4%BB%A3%E5%9F%BA%E7%A1%80-%E8%A1%8C%E5%88%97%E5%BC%8F/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>MySQL基础复习</title>
+    <url>/2022/01/16/MySql%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>教程笔记</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java基础复习</title>
+    <url>/2022/01/16/Java%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>爬虫</title>
+    <url>/2022/01/16/%E7%88%AC%E8%99%AB/</url>
+    <content><![CDATA[<p>学习路线：<a href="https://zhuanlan.zhihu.com/p/190256722">https://zhuanlan.zhihu.com/p/190256722</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Hadoop入门</title>
+    <url>/2022/01/16/Hadoop%E5%85%A5%E9%97%A8/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>CSS</title>
+    <url>/2022/01/16/CSS/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>HTML</title>
+    <url>/2022/01/16/HTML/</url>
     <content><![CDATA[]]></content>
   </entry>
 </search>
