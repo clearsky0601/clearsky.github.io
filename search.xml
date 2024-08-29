@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>2022考研数学真题(数一)</title>
-    <url>/2022/01/16/2022%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6%E7%9C%9F%E9%A2%98-%E6%95%B0%E4%B8%80/</url>
+    <title></title>
+    <url>/2022/12/29/12.29%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="12-29笔记"><a href="#12-29笔记" class="headerlink" title="12.29笔记"></a>12.29笔记</h1>]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022/04/03/2011TEXT4/</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>CSS</title>
     <url>/2022/01/16/CSS/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>2022考研数学真题(数一)</title>
+    <url>/2022/01/16/2022%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6%E7%9C%9F%E9%A2%98-%E6%95%B0%E4%B8%80/</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -27,18 +37,340 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Hadoop入门</title>
-    <url>/2022/01/16/Hadoop%E5%85%A5%E9%97%A8/</url>
-    <content><![CDATA[]]></content>
+    <title></title>
+    <url>/2022/04/09/Django%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<h1 id="Django学习"><a href="#Django学习" class="headerlink" title="Django学习"></a>Django学习</h1><p>官网：<a href="https://docs.djangoproject.com/zh-hans/4.0/">https://docs.djangoproject.com/zh-hans/4.0/</a></p>
+<h2 id="Django框架介绍与安装"><a href="#Django框架介绍与安装" class="headerlink" title="Django框架介绍与安装"></a>Django框架介绍与安装</h2><h3 id="Web开发"><a href="#Web开发" class="headerlink" title="Web开发"></a>Web开发</h3><p>目前Web开发属于Browser/Server模式，简称BS架构，开发语言有（Python、PHP、Java …）</p>
+<p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/webjg.png" alt="img"></p>
+<h3 id="Django框架"><a href="#Django框架" class="headerlink" title="Django框架"></a>Django框架</h3><p>框架就是程序的骨架。</p>
+<blockquote>
+<ul>
+<li>Django是一个高级的Python Web框架，它鼓励快速开发和清洁，务实的设计。</li>
+<li>由经验丰富的开发人员构建，它负责Web开发的许多麻烦，因此您可以专注于编写应用程序，而无需重新创建轮子。</li>
+<li>免费的、开源的。</li>
+<li>Django可以更快地构建更好的Web应用程序并减少代码。</li>
+</ul>
+</blockquote>
+<h4 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h4><ul>
+<li>可重用</li>
+<li>成熟,稳健</li>
+<li>易扩展、易维护</li>
+</ul>
+<h4 id="MVC-与-MVT"><a href="#MVC-与-MVT" class="headerlink" title="MVC 与 MVT"></a>MVC 与 MVT</h4><p>MVC：有一种程序设计模式叫<strong>MVC</strong>（Model-View-Controller）<strong>，其核心思想是</strong>分工、解耦，让不同的代码块之间降低耦合，增强代码的可扩展性和可移植性，实现向后兼容**。</p>
+<p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/mvc.png" alt="img"></p>
+<ul>
+<li>m表示model，主要用于对<strong>数据库层的封装</strong></li>
+<li>v表示view，用于<strong>向用户展示结果</strong></li>
+<li>c表示controller，是核心，用于处理请求、获取数据、与Model和View交互、返回结果</li>
+</ul>
+<p>MVT：Django是一款python的web开发框架</p>
+<p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/mvt.png" alt="img"></p>
+<ul>
+<li>m表示model，负责与<strong>数据库交互</strong></li>
+<li>v表示view，是核心，负责接收请求、获取数据、返回结果，与MVC中的C功能相同，接收请求，进行业务处理，返回应答。</li>
+<li>t表示template，负责呈现内容到浏览器，与MVC中的V功能相同，负责封装构造要返回的html。</li>
+</ul>
+<h4 id="Python中常见的框架"><a href="#Python中常见的框架" class="headerlink" title="Python中常见的框架"></a>Python中常见的框架</h4><ul>
+<li>大包大揽 Django 被官方称之为完美主义者的Web框架。</li>
+<li>力求精简 web.py和Tornado</li>
+<li>新生代微框架 Flask和Bottle</li>
+</ul>
+<h2 id="Django安装"><a href="#Django安装" class="headerlink" title="Django安装"></a>Django安装</h2><h3 id="版本"><a href="#版本" class="headerlink" title="版本"></a>版本</h3><blockquote>
+<p>在使用Flask框架时，项目工程目录的组织与创建是需要我们自己手动创建完成的。</p>
+<p>在django中，项目工程目录可以借助django提供的命令帮助我们创建。</p>
+<p>Django自带一个实用程序，可以自动生成应用程序的基本目录结构，因此您可以专注于编写代码而不是创建目录。</p>
+</blockquote>
+<h2 id="创建项目与运行"><a href="#创建项目与运行" class="headerlink" title="创建项目与运行"></a>创建项目与运行</h2><p>从命令行cd到您要存储代码的目录，然后运行以下命令：</p>
+<h3 id="创建Django项目"><a href="#创建Django项目" class="headerlink" title="创建Django项目"></a><strong>创建Django项目</strong></h3><pre class="line-numbers language-none"><code class="language-none">django-admin startproject name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>文件结构：</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[root@localhost myweb]# tree
+.
+├── manage.py #项目管理文件，通过它管理项目, 与此Django项目进行交互
+└── myweb 
+    ├── __init__.py   # 一个空的文件，告诉Python这个目录应该被认为是一个Python包，python包的初始化文件
+    ├── settings.py   # 配置文件
+    ├── urls.py    # URL配置文件，主路由配置
+    └── wsgi.py    # 项目与WSGI兼容的Web服务器入口<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="运行新建的项目"><a href="#运行新建的项目" class="headerlink" title="运行新建的项目"></a>运行新建的项目</h4><pre class="line-numbers language-none"><code class="language-none">python manage.py runserver<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>可以不写IP和端口，默认IP是127.0.0.1，默认端口为8000</strong>。</p>
+<p>也可以指定端口开启服务,如8080端口：</p>
+<pre class="line-numbers language-none"><code class="language-none">python manage.py runserver 8080<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+
+
+<h2 id="settings-py"><a href="#settings-py" class="headerlink" title="settings.py"></a>settings.py</h2><p>所用参数参考论坛：<a href="https://blog.csdn.net/lichangrui2009/article/details/86487346">https://blog.csdn.net/lichangrui2009/article/details/86487346</a></p>
+<p>配置项分为<strong>公有配置</strong>和<strong>自定义配置</strong></p>
+<p>配置项格式：<img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/image-20220414122731494.png" alt="image-20220414122731494" style="zoom: 50%;" /></p>
+<h3 id="url"><a href="#url" class="headerlink" title="url"></a>url</h3><p>url请求：</p>
+<p>url.py</p>
+<p>Path函数:</p>
+<p>Django path() 可以接收四个参数，两个必选参数：route、view 和两个可选参数：kwargs、name。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">path<span class="token punctuation">(</span>route<span class="token punctuation">,</span> view<span class="token punctuation">,</span> kwargs<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+<ul>
+<li>route: 字符串，表示 URL 规则，与之匹配的 URL 会执行对应的第二个参数 view。</li>
+<li>view: 用于执行与正则表达式匹配的 URL 请求。</li>
+<li>kwargs: 视图使用的字典类型的参数。</li>
+<li>name: 用来反向获取 URL。</li>
+</ul>
+<h2 id="模板："><a href="#模板：" class="headerlink" title="模板："></a>模板：</h2><p>render函数：<a href="https://zhuanlan.zhihu.com/p/366730772">https://zhuanlan.zhihu.com/p/366730772</a></p>
+<h3 id="视图函数"><a href="#视图函数" class="headerlink" title="视图函数"></a>视图函数</h3><h3 id="创建子应用"><a href="#创建子应用" class="headerlink" title="创建子应用"></a><strong>创建子应用</strong></h3><pre class="line-numbers language-none"><code class="language-none">python manager.py startapp name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>文件结构：</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[root@localhost demo]# tree myweb&#x2F;
+myweb&#x2F;
+├── manage.py
+├── myweb
+│   ├── __init__.py
+│   ├── settings.py #配置文件
+│   ├── urls.py
+│   └── wsgi.py
+└── myapp
+    ├── admin.py   # 后台管理配置
+    ├── apps.py    #配置当前子应用的相关信息
+    ├── __init__.py
+    ├── migrations #存放数据库迁移历史文件
+    │   └── __init__.py  
+    ├── models.py #保存数据库模型类
+    ├── tests.py #开发测试用例，编写单元测试
+    └── views.py #编写Web应用视图<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>编写</p>
+<p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/image-20220414131539936.png" alt="image-20220414131539936"></p>
+]]></content>
   </entry>
   <entry>
-    <title>Java基础复习</title>
-    <url>/2022/01/16/Java%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/</url>
-    <content><![CDATA[]]></content>
+    <title></title>
+    <url>/2022/03/30/HTTP%E5%8D%8F%E8%AE%AE%E5%92%8C%E9%9D%99%E6%80%81Web%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+    <content><![CDATA[<hr>
+<hr>
+<h1 id="HTTP协议和静态Web服务器"><a href="#HTTP协议和静态Web服务器" class="headerlink" title="HTTP协议和静态Web服务器"></a>HTTP协议和静态Web服务器</h1><h2 id="HTTP-协议"><a href="#HTTP-协议" class="headerlink" title="HTTP 协议"></a>HTTP 协议</h2><p>HTTP 协议的全称是(HyperText Transfer Protocol)，翻译过来就是<strong>超文本传输协议</strong>。</p>
+<p>传输 HTTP 协议格式的数据是基于 TCP 传输协议的，<strong>发送数据之前需要先建立连接。</strong></p>
+<p>它<strong>规定了浏览器和 Web 服务器通信数据的格式，也就是说浏览器和web服务器通信需要使用http协议</strong>。</p>
+<p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/%E8%AE%BF%E9%97%AEweb%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E9%80%9A%E4%BF%A1%E8%BF%87%E7%A8%8B.png" alt="通信效果图"></p>
+<h2 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h2><p>URL的英文全拼是(Uniform Resoure Locator),表达的意思是统一资源定位符，通俗理解就是网络资源地址，也就是我们常说的网址。</p>
+<p><strong>URL的样子:</strong></p>
+<p><a href="https://news.163.com/18/1122/10/E178J2O4000189FH.html">https://news.163.com/18/1122/10/E178J2O4000189FH.html</a></p>
+<p><strong>URL的组成部分:</strong></p>
+<ol>
+<li><strong>协议部分</strong>: https://、http://、ftp://</li>
+<li><strong>域名部分</strong>: news.163.com</li>
+<li><strong>资源路径部分</strong>: /18/1122/10/E178J2O4000189FH.html</li>
+</ol>
+<p><strong>域名:</strong></p>
+<p>域名就是<strong>IP地址的别名</strong>，它是用点进行分割使用英文字母和数字组成的名字，<strong>使用域名目的就是方便的记住某台主机IP地址</strong>。</p>
+<p><strong>URL的扩展:</strong></p>
+<p><a href="https://news.163.com/hello.html?page=1&amp;count=10">https://news.163.com/hello.html?page=1&amp;count=10</a></p>
+<ul>
+<li><strong>查询参数部分</strong>: ?page=1&amp;count=10</li>
+</ul>
+<p><strong>参数说明:</strong></p>
+<ul>
+<li> 后面的 page 表示第一个参数，后面的参数都使用 &amp; 进行连接</li>
+</ul>
+<h2 id="查看HTTP协议的通信过程"><a href="#查看HTTP协议的通信过程" class="headerlink" title="查看HTTP协议的通信过程"></a>查看HTTP协议的通信过程</h2><ul>
+<li>元素（Elements）：用于查看或修改HTML标签</li>
+<li>控制台（Console）：执行js代码</li>
+<li>源代码（Sources）：查看静态资源文件，断点调试JS代码</li>
+<li>网络（Network）：查看http协议的通信过程</li>
+</ul>
+<p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/image-20220330204419470.png" alt="image-20220330204419470"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>HTML</title>
+    <url>/2022/01/16/HTML%E4%B8%8ECSS/</url>
+    <content><![CDATA[<p>参考资料：</p>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>HTML是什么？</p>
+<blockquote>
+<p>•HTML是 HyperText Mark-up Language 的首字母简写，即超文本标记语言，非编程语言！</p>
+<p>•扩展名为.html或者.htm</p>
+</blockquote>
+<p>HTML基本结构</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span> <span class="token comment">&lt;!--第一行&lt;!DOCTYPE html>是文档声明, 用来指定页面所使用的html的版本, 这里声明的是一个html5的文档。--></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>网页标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+         <span class="token comment">&lt;!--   此处可以写各种头属性设置、CSS样式和JavaScript脚本等...   --></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+    
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+        <span class="token comment">&lt;!--   此处为网页显示内容...   --></span>
+    	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>我的第一个标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+    	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>我的第一个段落。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>有关“&lt;!DOCTYPE&gt; 声明”：不区分大小写</p>
+<p>•HTML是由：<strong>标签</strong>和<strong>内容</strong>构成</p>
+<p>•HTML标签（标记）的语法是由 &lt; 和 &gt; 括起来。</p>
+<p>•HTML标签有两种：</p>
+<ul>
+<li>双标签：&lt;标签名&gt;….&lt;/标签名&gt; </li>
+<li>单标签：&lt;标签名/&gt;</li>
+</ul>
+<p>•HTML标签中还可以添加属性：</p>
+<p>​      &lt;标签名 属性名1=“值1” 属性名2=“值2” 属性名n=“值n”&gt;….&lt;/标签名&gt;</p>
+<p>•HTML标签规范：标签名小写、标签要闭合。</p>
+<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token comment">&lt;!--   这就是唯一的一种HTML注释了   --></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+
+
+
+
+
+
+<h2 id="VS-code"><a href="#VS-code" class="headerlink" title="VS code"></a>VS code</h2><h3 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h3><p>vscode 中使用浏览器打开 html 文件需要 安装**”open in browser”** 扩展。</p>
+<h2 id="头部信息"><a href="#头部信息" class="headerlink" title="头部信息"></a>头部信息</h2><pre class="line-numbers language-none"><code class="language-none">设置网页编码：       &lt;meta charset&#x3D;&quot;utf-8&quot;&#x2F;&gt;
+关键字:        	 &lt;meta name&#x3D;&quot;Keywords&quot; content&#x3D;&quot;关键字&quot; &#x2F;&gt;
+描述:            	 &lt;meta name&#x3D;&quot;Description&quot; content&#x3D;&quot;简介、描述&quot; &#x2F;&gt;
+网页标题:        	 &lt;title&gt;本网页标题&lt;&#x2F;title&gt;
+导入CSS文件:        &lt;link type&#x3D;&quot;text&#x2F;css&quot; rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;**.css&quot;&#x2F;&gt;
+CSS代码：    	    &lt;style type&#x3D;&quot;text&#x2F;css&quot;&gt;嵌入css样式代码&lt;&#x2F;style&gt;
+JS文件或代码:	   &lt;script &gt;。。。&lt;&#x2F;script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>中文字符声明为 UTF-8 或 GBK。</p>
+<h2 id="HTML常用标签介绍"><a href="#HTML常用标签介绍" class="headerlink" title="HTML常用标签介绍"></a>HTML常用标签介绍</h2><h2 id="1-文本标签"><a href="#1-文本标签" class="headerlink" title="1.文本标签"></a>1.文本标签</h2><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>hn</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>hn</span><span class="token punctuation">></span></span>  其中n为1--6的值。 标题标签（加粗、独立行）
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>  斜体
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>em</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>em</span><span class="token punctuation">></span></span>  强调斜体
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>b</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>b</span><span class="token punctuation">></span></span>  加粗
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">></span></span>  强调加粗
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>cite</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>cite</span><span class="token punctuation">></span></span>  作品的标题（引用）
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sub</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sub</span><span class="token punctuation">></span></span>下标 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sup</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sup</span><span class="token punctuation">></span></span> 上标
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>del</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>del</span><span class="token punctuation">></span></span>  删除线<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="2-格式化标签"><a href="#2-格式化标签" class="headerlink" title="2.格式化标签"></a>2.格式化标签</h2><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">/></span></span>           换行
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span> 换段
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>hr</span> <span class="token punctuation">/></span></span>          水平分割线
+列表：
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>    无序列表
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ol</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ol</span><span class="token punctuation">></span></span>    有序列表 其中type类型值：A a I i 1 start属性表示起始值
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>        列表项
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dl</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dl</span><span class="token punctuation">></span></span>     自定义列表
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dt</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dt</span><span class="token punctuation">></span></span>    自定义列表头
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dd</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dd</span><span class="token punctuation">></span></span>  自定义列表内容
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>   常用于组合块级元素，以便通过 CSS 来对这些元素进行格式化
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span> 常用于包含的文本，您可以使用 CSS 对它定义样式，或者使用 JavaScript 对它进行操作。
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="3-图片标签"><a href="#3-图片标签" class="headerlink" title="3.图片标签"></a>3.图片标签</h2><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token punctuation">/></span></span> 在网页中插入一张图片
+    属性：
+		src： 图片名及url地址
+		alt: 图片加载失败时的提示信息
+		title：文字提示属性
+		width：图片宽度
+		height：图片高度
+		border：边框线粗细<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="4-超级链接标签"><a href="#4-超级链接标签" class="headerlink" title="4.超级链接标签"></a>4.超级链接标签</h2><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span>“</span> <span class="token attr-name">”</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span> 超级链接标签， 属性如下：
+	href: 必须，指的是链接跳转地址
+	target: 表示链接的打开方式：
+	_blank  新窗口
+	_parent 父窗口
+	_self   本窗口（默认）
+     _top    顶级窗口
+	framename 窗口名
+ 	title：文字提示属性（详情）
+
+锚点链接：
+	定义一个锚点：<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>a1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span> 以前使用的是 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>a1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+ 	使用锚点：    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#a1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>跳到a1处<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="5-表格标签"><a href="#5-表格标签" class="headerlink" title="5.表格标签"></a>5.表格标签</h2><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>table</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>table</span><span class="token punctuation">></span></span>  表格标签: 属性：border、 width、 cellspacing、 cellpadding
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>caption</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>caption</span><span class="token punctuation">></span></span> 表格标题
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>  行标签
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">></span></span>  列头标签
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>  列标签: 跨行属性：rowspan  跨列属性：colspan   
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>thead</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>thead</span><span class="token punctuation">></span></span>  表头
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tbody</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tbody</span><span class="token punctuation">></span></span>  表体
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tfoot</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tfoot</span><span class="token punctuation">></span></span>  表尾
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="6-表单标签"><a href="#6-表单标签" class="headerlink" title="6.表单标签"></a>6.表单标签</h2><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span>     表单标签
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token punctuation">/></span></span> 	           表单项标签input定义输入字段，用户可在其中输入数据。
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>select</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>select</span><span class="token punctuation">></span></span> 标签创建下拉列表。
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>textarea</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>textarea</span><span class="token punctuation">></span></span> 多行的文本输入区域
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>       标签定义按钮。
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>fieldset</span><span class="token punctuation">></span></span> --<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>fieldset</span><span class="token punctuation">></span></span>     元素可将表单内的相关元素分组。
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>legend</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>legend</span><span class="token punctuation">></span></span>           标签为 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>fieldset</span><span class="token punctuation">></span></span>、<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>figure</span><span class="token punctuation">></span></span> 以及 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>details</span><span class="token punctuation">></span></span> 元素定义标题。
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>datalist</span><span class="token punctuation">></span></span> html5标签--<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>datalist</span><span class="token punctuation">></span></span>         标签定义可选数据的列表。
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>optgroup</span><span class="token punctuation">></span></span> html5标签--<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>optgroup</span><span class="token punctuation">></span></span> 标签定义选项组。
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="7-行内框架标签"><a href="#7-行内框架标签" class="headerlink" title="7.行内框架标签"></a>7.行内框架标签</h2><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>iframe</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>iframe</span><span class="token punctuation">></span></span> 行内框架
+     属性：
+              src：规定在 iframe 中显示的文档的 URL
+      name：规定 iframe 的名称
+      height：规定 iframe 的高度。
+      width：定义 iframe 的宽度。
+      frameborder：规定是否显示框架周围的边框。
+例如：<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>iframe</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1.html<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>myframe<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>700<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>500<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>iframe</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="8-多媒体标签"><a href="#8-多媒体标签" class="headerlink" title="8.多媒体标签"></a>8.多媒体标签</h2><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>audio</span><span class="token punctuation">></span></span>…<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>audio</span><span class="token punctuation">></span></span>   音频标签
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>video</span><span class="token punctuation">></span></span>…<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>video</span><span class="token punctuation">></span></span>   视频标签
+播放Flash的标签
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>embed</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>./images/haowan.swf<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>300<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>300<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<h1 id="CSS-层叠样式表"><a href="#CSS-层叠样式表" class="headerlink" title="CSS 层叠样式表"></a>CSS 层叠样式表</h1><h2 id="什么是-CSS"><a href="#什么是-CSS" class="headerlink" title="什么是 CSS"></a>什么是 CSS</h2><p>CSS 指层叠样式表 (Cascading Style Sheets)</p>
+<blockquote>
+<p>•样式定义如何显示控制 HTML 元素,从而实现美化HTML网页。</p>
+<p>•样式通常存储在样式表中，目的也是为了解决内容与表现分离的问题</p>
+<p>•外部样式表(CSS文件)可以极大提高工作效率</p>
+<p>•多个样式定义可层叠为一，后者可以覆盖前者样式</p>
+</blockquote>
+<p>css 是由两个主要的部分构成：<strong>选择器和一条或多条样式规则</strong>，注意:<strong>样式规则需要放到大括号里面。</strong></p>
+<p>CSS 可以通过以下方式添加到HTML中:</p>
+<ul>
+<li>内联样式- 在HTML元素中使用”style” <strong>属性</strong></li>
+<li>内部样式表 -在HTML文档头部 <head> 区域使用<style> <strong>元素</strong> 来包含CSS</li>
+<li>外部引用 - 使用外部 CSS <strong>文件</strong></li>
+</ul>
+]]></content>
   </entry>
   <entry>
     <title>JavaScript</title>
     <url>/2022/01/16/JavaScript/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Hadoop入门</title>
+    <url>/2022/01/16/Hadoop%E5%85%A5%E9%97%A8/</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -2486,6 +2818,141 @@ file_list <span class="token operator">=</span> os<span class="token punctuation
       </tags>
   </entry>
   <entry>
+    <title></title>
+    <url>/2022/04/08/Ubuntu%E4%BF%AE%E6%94%B9%E9%9D%99%E6%80%81ip/</url>
+    <content><![CDATA[<h1 id="Ubuntu20-04"><a href="#Ubuntu20-04" class="headerlink" title="Ubuntu20.04"></a>Ubuntu20.04</h1><h1 id="Ubuntu-Apt-如何使用清华源"><a href="#Ubuntu-Apt-如何使用清华源" class="headerlink" title="Ubuntu Apt 如何使用清华源"></a>Ubuntu Apt 如何使用清华源</h1><p>Ubuntu默认的apt源由于在国外，速度特别的慢，使用清华源，能实现快速安装想要的软件。</p>
+<h1 id="设置静态ip"><a href="#设置静态ip" class="headerlink" title="设置静态ip:"></a>设置静态ip:</h1><p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/image-20220408134311500.png" alt="image-20220408134311500"></p>
+<p><img src="C:/Users/clearsky0601/AppData/Roaming/Typora/typora-user-images/image-20220408134239745.png" alt="image-20220408134239745"></p>
+<p>进入配置目录</p>
+<pre class="line-numbers language-none"><code class="language-none">cd &#x2F;etc&#x2F;netplan<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>修改配置文件:</p>
+<pre class="line-numbers language-none"><code class="language-none">sudo vim 00-installer-config.yaml<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">network:
+  version: 2
+  renderer: NetworkManager
+  ethernets:
+    ens33:      # 配置的网卡名称，可以使用ifconfig -a查看本机的网卡
+      dhcp4: no #  关闭动态IP设置，因为要设置固定IP
+      addresses: [192.168.10.110&#x2F;24] # 要设置的固定IP，后面的24为子网掩码的位数
+      gateway4: 192.168.10.2    # 要设置的网关地址
+      nameservers:
+        addresses: [114.114.114.114,8.8.8.8]    # 要设置的DNS地址<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>生效:</p>
+<pre class="line-numbers language-none"><code class="language-none">sudo netplan apply<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+<h1 id="apt换成清华源"><a href="#apt换成清华源" class="headerlink" title="apt换成清华源"></a>apt换成清华源</h1><p><a href="https://blog.csdn.net/qq_42620328/article/details/116313697">https://blog.csdn.net/qq_42620328/article/details/116313697</a></p>
+<h1 id="连接Xshell"><a href="#连接Xshell" class="headerlink" title="连接Xshell"></a>连接Xshell</h1><p><a href="https://www.cnblogs.com/jiumo/p/13297831.html">https://www.cnblogs.com/jiumo/p/13297831.html</a></p>
+<p>​    </p>
+<pre class="line-numbers language-none"><code class="language-none">sudo apt-get install openssh-server openssh-client<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><a href="https://blog.csdn.net/qq_39086076/article/details/80520672">https://blog.csdn.net/qq_39086076/article/details/80520672</a></p>
+<h1 id="管理员密码"><a href="#管理员密码" class="headerlink" title="管理员密码"></a>管理员密码</h1><p><a href="https://blog.csdn.net/wu_wxc/article/details/48861891">https://blog.csdn.net/wu_wxc/article/details/48861891</a></p>
+<h1 id="文件管理"><a href="#文件管理" class="headerlink" title="文件管理"></a>文件管理</h1><h2 id="1、opt目录"><a href="#1、opt目录" class="headerlink" title="1、opt目录"></a>1、opt目录</h2><p>/opt目录用来安装附加软件包，是用户级的程序目录，可以理解为D:/Software。安装到/opt目录下的程序，它所有的数据、库文件等等都是放在同个目录下面。opt有可选的意思，这里可以用于放置第三方大型软件（或游戏），当你不需要时，直接rm -rf掉即可。在硬盘容量不够时，也可将/opt单独挂载到其他磁盘上使用。</p>
+<h2 id="2、-usr目录"><a href="#2、-usr目录" class="headerlink" title="2、/usr目录"></a>2、/usr目录</h2><p>/usr：系统级的目录，可以理解为C:/Windows/。<br>/usr/lib：理解为C:/Windows/System32。<br>/usr/local：用户级的程序目录，可以理解为C:/Progrem Files/。用户自己编译的软件默认会安装到这个目录下。 这里主要存放那些手动安装的软件，即不是通过“yum”或apt-get安装的软件。它和/usr目录具有相类似的目录结构。让软件包管理器来管理/usr目录，而把自定义的脚本(scripts)放到/usr/local目录下面。</p>
+<h2 id="3、源码放哪里"><a href="#3、源码放哪里" class="headerlink" title="3、源码放哪里"></a>3、源码放哪里</h2><p>/usr/src：系统级的源码目录。<br>/usr/local/src：用户级的源码目录。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022/01/16/Untitled/</url>
+    <content><![CDATA[<p>博客设置</p>
+<p><a href="https://www.antmoe.com/posts/3b43914f/">https://www.antmoe.com/posts/3b43914f/</a></p>
+<p><a href="https://butterfly.js.org/posts/4aa8abbe/#%E6%96%87%E7%AB%A0meta%E9%A1%AF%E7%A4%BA">https://butterfly.js.org/posts/4aa8abbe/#%E6%96%87%E7%AB%A0meta%E9%A1%AF%E7%A4%BA</a></p>
+<h2 id="新建项目时Pycharm找不到已安装的Python解释器："><a href="#新建项目时Pycharm找不到已安装的Python解释器：" class="headerlink" title="新建项目时Pycharm找不到已安装的Python解释器："></a>新建项目时Pycharm找不到已安装的Python解释器：</h2><p><img src="https://s2.loli.net/2022/01/16/QdeOV4TNxrKbGP6.png" alt="image-20220116101444447"></p>
+<p>pycharm中HTML格式预览乱码问题： <a href="https://blog.csdn.net/weixin_43579798/article/details/111592336">https://blog.csdn.net/weixin_43579798/article/details/111592336</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022/04/27/Ubuntu%E5%A5%BD%E7%94%A8%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<p><a href="http://t.zoukankan.com/silence-cc-p-8970374.html">http://t.zoukankan.com/silence-cc-p-8970374.html</a></p>
+<p><a href="https://blog.csdn.net/OKasy/article/details/79485436">https://blog.csdn.net/OKasy/article/details/79485436</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022/04/07/centos%E4%B8%8B%E8%BD%BDChrome%E6%B5%8F%E8%A7%88%E5%99%A8/</url>
+    <content><![CDATA[<h1 id="centos下载Chrome浏览器-pycharm"><a href="#centos下载Chrome浏览器-pycharm" class="headerlink" title="centos下载Chrome浏览器/pycharm"></a>centos下载Chrome浏览器/pycharm</h1><p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/image-20220407104122910.png" alt="image-20220407104122910"></p>
+<p>/usr： 系统级的目录，可以理解为C:/Windows/；/usr/bin 存放应用程序；/usr/share 存放共享数据，/usr/lib 存放不能直接运行的，却是许多程序运行所必需的一些函数库文件，可以理解为C:/Windows/System32<br>*比如Java的安装目录，我会放在这里。</p>
+<p>/usr/local：用户级的程序目录，可以理解为C:/Progrem Files/。<br>用户自己编译的软件默认会安装到这个目录下。<br>*比如Hadoop，Tomcat的安装目录我一般会放在/usr/目录下</p>
+<p>/opt：给主机额外安装软件所摆放的目录。用户级的程序目录，可以理解为D:/Software，opt有可选的意思，这里可以用于放置第三方大型软件（或游戏），当你不需要时，直接rm -rf掉即可。在硬盘容量不够时，也可将/opt单独挂载到其他磁盘上使用。<br>*比如临时上传到Linux里的软件；tar.gz rpm等文件，用作软件仓库。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022/04/27/conda%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h1 id="conda安装："><a href="#conda安装：" class="headerlink" title="conda安装："></a>conda安装：</h1><p>参考文档：</p>
+<p><a href="https://zhuanlan.zhihu.com/p/426655323">https://zhuanlan.zhihu.com/p/426655323</a></p>
+<p><a href="https://www.csdn.net/tags/OtDaYgwsOTgxMi1ibG9n.html">https://www.csdn.net/tags/OtDaYgwsOTgxMi1ibG9n.html</a></p>
+<h2 id="安装："><a href="#安装：" class="headerlink" title="安装："></a>安装：</h2><p>下载地址：<a href="https://www.anaconda.com/products/distribution#Downloads">https://www.anaconda.com/products/distribution#Downloads</a></p>
+<img src="/home/clearsky0601/snap/typora/57/.config/Typora/typora-user-images/image-20220427202508607.png" alt="image-20220427202508607" style="zoom: 67%;" />
+
+<p>下载<strong>Linux 64-Bit (x86) installer</strong>;</p>
+<p>拷贝至/usr/local/lib下</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">cp</span> Anaconda3-2021.11-Linux-x86_64.sh /usr/local/lib<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">bash</span> Anaconda3-2021.11-Linux-x86_64.sh <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>看到提示回答yes，然后安装（可以指定安装目录）。</p>
+<h1 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h1><p>编辑.bashrc文件：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">vim</span> ~/.bashrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<blockquote>
+</blockquote>
+<p>在文件的最后添加行：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=~</span>/anaconda3/bin:<span class="token environment constant">$PATH</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">source</span> ~/.bashrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+
+
+
+
+<h1 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h1>]]></content>
+  </entry>
+  <entry>
+    <title>Java基础复习</title>
+    <url>/2022/01/16/Java%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>linux复习</title>
     <url>/2022/01/11/linux%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h1 id="Linux入门"><a href="#Linux入门" class="headerlink" title="Linux入门"></a>Linux入门</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>Linux内核最初只是由<u>芬兰人</u><strong>林纳斯·托瓦兹</strong>（Linus Torvalds）在赫尔辛基大学上学时出于个人爱好而编写的。</p>
@@ -2697,8 +3164,8 @@ file_list <span class="token operator">=</span> os<span class="token punctuation
 <h1 id="网络配置和系统管理操作"><a href="#网络配置和系统管理操作" class="headerlink" title="网络配置和系统管理操作"></a>网络配置和系统管理操作</h1><h2 id="查看网络IP和网关"><a href="#查看网络IP和网关" class="headerlink" title="查看网络IP和网关"></a>查看网络IP和网关</h2><p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/image-20220110173212533.png" alt="image-20220110173212533"></p>
 <p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/image-20220110173127766.png" alt="image-20220110173127766"></p>
 <h2 id="配置网络ip地址"><a href="#配置网络ip地址" class="headerlink" title="配置网络ip地址"></a>配置网络ip地址</h2><h3 id="ifconfig-配置网络接口"><a href="#ifconfig-配置网络接口" class="headerlink" title="ifconfig 配置网络接口"></a>ifconfig 配置网络接口</h3><p><code>ifconfig</code> :network interfaces configuring 网络接口配置</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">#（功能描述：显示所有网络接口的配置信息）
-ifconfig		<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token comment">#（功能描述：显示所有网络接口的配置信息）</span>
+<span class="token function">ifconfig</span>		<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/image-20220110174046728.png" alt="image-20220110174046728"></p>
 <h3 id="ping-测试主机之间网络连通性"><a href="#ping-测试主机之间网络连通性" class="headerlink" title="ping 测试主机之间网络连通性"></a>ping 测试主机之间网络连通性</h3><p>ping外网：</p>
@@ -2707,8 +3174,8 @@ ifconfig		<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
 <p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/image-20220110174239809.png" alt="image-20220110174239809"></p>
 <p>ping Hadoop103</p>
 <p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/image-20220110174441714.png" alt="image-20220110174441714"></p>
-<h3 id="修改IP地址"><a href="#修改IP地址" class="headerlink" title="修改IP地址"></a>修改IP地址</h3><h2 id="配置主机名"><a href="#配置主机名" class="headerlink" title="配置主机名"></a>配置主机名</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">#（功能描述：查看当前服务器的主机名称）
-hostname  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="修改IP地址"><a href="#修改IP地址" class="headerlink" title="修改IP地址"></a>修改IP地址</h3><h2 id="配置主机名"><a href="#配置主机名" class="headerlink" title="配置主机名"></a>配置主机名</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token comment">#（功能描述：查看当前服务器的主机名称）</span>
+<span class="token function">hostname</span>  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>查看当前服务器主机名称</p>
 <p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/image-20220110173809459.png" alt="image-20220110173809459"></p>
@@ -2718,7 +3185,7 @@ hostname  <span aria-hidden="true" class="line-numbers-rows"><span></span><span>
 <p>service 服务名 restart       （功能描述：重新启动服务）</p>
 <p>service 服务名 status        （功能描述：查看服务状态）</p>
 <h3 id="关闭防火墙-1"><a href="#关闭防火墙-1" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h3><p>查看防火墙状态</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">service iptables status<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">service</span> iptables status<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/image-20220110185122435.png" alt="image-20220110185122435"></p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">systemctl status firewalld<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -2726,13 +3193,13 @@ hostname  <span aria-hidden="true" class="line-numbers-rows"><span></span><span>
 
 
 <p>临时关闭防火墙</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">service iptables stop<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">service</span> iptables stop<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>查看防火墙开机启动状态</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">chkconfig iptables --list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">chkconfig</span> iptables --list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>设置开机时关闭防火墙</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">chkconfig iptables off<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">chkconfig</span> iptables off<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
@@ -2781,26 +3248,26 @@ hostname  <span aria-hidden="true" class="line-numbers-rows"><span></span><span>
 </blockquote>
 <p>🚩案例实操</p>
 <p>将数据由内存同步到硬盘中:</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sync  <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">sync</span>  <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>重启:</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">reboot <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">reboot</span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>关机:</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">halt <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">halt</span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>计算机将在1分钟后关机，并且会显示在登录用户的当前屏幕中</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">shutdown -h 1 ‘This server will shutdown after 1 mins’<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">shutdown</span> -h <span class="token number">1</span> ‘This server will <span class="token function">shutdown</span> after <span class="token number">1</span> mins’<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/image-20220110192346032.png" alt="image-20220110192346032"></p>
 <p>立马关机（等同于 halt）:</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">shutdown -h now <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">shutdown</span> -h now <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>系统立马重启（等同于 reboot）:</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">shutdown -r now<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">shutdown</span> -r now<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h2 id="找回root密码"><a href="#找回root密码" class="headerlink" title="找回root密码"></a>找回root密码</h2><h2 id="克隆虚拟机"><a href="#克隆虚拟机" class="headerlink" title="克隆虚拟机"></a>克隆虚拟机</h2><h1 id="远程登陆"><a href="#远程登陆" class="headerlink" title="远程登陆"></a>远程登陆</h1><h1 id="常用基本命令"><a href="#常用基本命令" class="headerlink" title="常用基本命令"></a>常用基本命令</h1><h2 id="帮助命令"><a href="#帮助命令" class="headerlink" title="帮助命令"></a>帮助命令</h2><h3 id="man-获得帮助信息"><a href="#man-获得帮助信息" class="headerlink" title="man 获得帮助信息"></a>man 获得帮助信息</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">#功能描述：获得帮助信息
-man [命令或配置文件]		<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h2 id="找回root密码"><a href="#找回root密码" class="headerlink" title="找回root密码"></a>找回root密码</h2><h2 id="克隆虚拟机"><a href="#克隆虚拟机" class="headerlink" title="克隆虚拟机"></a>克隆虚拟机</h2><h1 id="远程登陆"><a href="#远程登陆" class="headerlink" title="远程登陆"></a>远程登陆</h1><h1 id="常用基本命令"><a href="#常用基本命令" class="headerlink" title="常用基本命令"></a>常用基本命令</h1><h2 id="帮助命令"><a href="#帮助命令" class="headerlink" title="帮助命令"></a>帮助命令</h2><h3 id="man-获得帮助信息"><a href="#man-获得帮助信息" class="headerlink" title="man 获得帮助信息"></a>man 获得帮助信息</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token comment">#功能描述：获得帮助信息</span>
+<span class="token function">man</span> <span class="token punctuation">[</span>命令或配置文件<span class="token punctuation">]</span>		<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <table>
 <thead>
@@ -2831,8 +3298,8 @@ man [命令或配置文件]		<span aria-hidden="true" class="line-numbers-rows">
 </tr>
 </tbody></table>
 <p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/image-20220110210046022.png" alt="image-20220110210046022"></p>
-<h3 id="help-获得shell内置命令的帮助信息"><a href="#help-获得shell内置命令的帮助信息" class="headerlink" title="help 获得shell内置命令的帮助信息"></a>help 获得shell内置命令的帮助信息</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">#功能描述：获得shell内置命令的帮助信息
-help 命令	<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="help-获得shell内置命令的帮助信息"><a href="#help-获得shell内置命令的帮助信息" class="headerlink" title="help 获得shell内置命令的帮助信息"></a>help 获得shell内置命令的帮助信息</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token comment">#功能描述：获得shell内置命令的帮助信息</span>
+<span class="token builtin class-name">help</span> 命令	<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <table>
 <thead>
@@ -2974,8 +3441,8 @@ help 命令	<span aria-hidden="true" class="line-numbers-rows"><span></span><spa
 <h3 id="touch-创建空文件"><a href="#touch-创建空文件" class="headerlink" title="touch 创建空文件"></a>touch 创建空文件</h3><pre class="line-numbers language-none"><code class="language-none">touch 文件名称<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/image-20220110214745465.png" alt="image-20220110214745465"></p>
-<h3 id="cp-复制文件或目录"><a href="#cp-复制文件或目录" class="headerlink" title="cp 复制文件或目录"></a>cp 复制文件或目录</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">#功能描述：复制source文件到dest
-cp [选项] source dest <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="cp-复制文件或目录"><a href="#cp-复制文件或目录" class="headerlink" title="cp 复制文件或目录"></a>cp 复制文件或目录</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token comment">#功能描述：复制source文件到dest</span>
+<span class="token function">cp</span> <span class="token punctuation">[</span>选项<span class="token punctuation">]</span> <span class="token builtin class-name">source</span> dest <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <table>
 <thead>
@@ -3009,8 +3476,8 @@ cp [选项] source dest <span aria-hidden="true" class="line-numbers-rows"><span
 <p>🚩强制覆盖不提示的方法：\cp</p>
 </blockquote>
 <p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/image-20220110215217851.png" alt="image-20220110215217851"></p>
-<h3 id="rm-移除文件或目录"><a href="#rm-移除文件或目录" class="headerlink" title="rm 移除文件或目录"></a>rm 移除文件或目录</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">#功能描述：递归删除目录中所有内容
-rm [选项] deleteFile<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="rm-移除文件或目录"><a href="#rm-移除文件或目录" class="headerlink" title="rm 移除文件或目录"></a>rm 移除文件或目录</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token comment">#功能描述：递归删除目录中所有内容</span>
+<span class="token function">rm</span> <span class="token punctuation">[</span>选项<span class="token punctuation">]</span> deleteFile<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <table>
 <thead>
@@ -3033,11 +3500,11 @@ rm [选项] deleteFile<span aria-hidden="true" class="line-numbers-rows"><span><
 </tr>
 </tbody></table>
 <p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/image-20220110215324247.png" alt="image-20220110215324247"></p>
-<h3 id="mv-移动文件与目录或重命名"><a href="#mv-移动文件与目录或重命名" class="headerlink" title="mv 移动文件与目录或重命名"></a>mv 移动文件与目录或重命名</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">#功能描述：重命名:
-mv oldNameFile newNameFile	
+<h3 id="mv-移动文件与目录或重命名"><a href="#mv-移动文件与目录或重命名" class="headerlink" title="mv 移动文件与目录或重命名"></a>mv 移动文件与目录或重命名</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token comment">#功能描述：重命名:</span>
+<span class="token function">mv</span> oldNameFile newNameFile	
 
 功能描述：移动文件:
-mv &#x2F;temp&#x2F;movefile &#x2F;targetFolder	<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token function">mv</span> /temp/movefile /targetFolder	<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
@@ -3172,10 +3639,10 @@ mv &#x2F;temp&#x2F;movefile &#x2F;targetFolder	<span aria-hidden="true" class="l
 </tr>
 </tbody></table>
 <h3 id="head-显示文件头部内容"><a href="#head-显示文件头部内容" class="headerlink" title="head 显示文件头部内容"></a>head 显示文件头部内容</h3><p>head用于显示文件的开头部分内容，默认情况下head指令显示文件的前10行内容。</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">#功能描述：查看文件头10行内容
-head 文件	      
-#功能描述：查看文件头5行内容，5可以是任意行数
-head -n 5 文件      <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token comment">#功能描述：查看文件头10行内容</span>
+<span class="token function">head</span> 文件	      
+<span class="token comment">#功能描述：查看文件头5行内容，5可以是任意行数</span>
+<span class="token function">head</span> -n <span class="token number">5</span> 文件      <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <table>
 <thead>
@@ -3192,12 +3659,12 @@ head -n 5 文件      <span aria-hidden="true" class="line-numbers-rows"><span><
 <p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/image-20220110220621688.png" alt="image-20220110220621688"></p>
 <p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/image-20220110220824546.png" alt="image-20220110220824546"></p>
 <h3 id="tail-输出文件尾部内容"><a href="#tail-输出文件尾部内容" class="headerlink" title="tail 输出文件尾部内容"></a>tail 输出文件尾部内容</h3><p>tail用于输出文件中尾部的内容，默认情况下tail指令显示文件的前10行内容。</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">#功能描述：查看文件头10行内容
-tail  文件 			
-#功能描述：查看文件头5行内容，5可以是任意行数
-tail  -n 5 文件 		
-#功能描述：实时追踪该文档的所有更新
-tail  -f  文件		<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token comment">#功能描述：查看文件头10行内容</span>
+<span class="token function">tail</span>  文件 			
+<span class="token comment">#功能描述：查看文件头5行内容，5可以是任意行数</span>
+<span class="token function">tail</span>  -n <span class="token number">5</span> 文件 		
+<span class="token comment">#功能描述：实时追踪该文档的所有更新</span>
+<span class="token function">tail</span>  -f  文件		<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <table>
 <thead>
@@ -3216,15 +3683,15 @@ tail  -f  文件		<span aria-hidden="true" class="line-numbers-rows"><span></spa
 </tr>
 </tbody></table>
 <p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/image-20220110221139721.png" alt="image-20220110221139721"></p>
-<h3 id="gt-输出重定向和-gt-gt-追加"><a href="#gt-输出重定向和-gt-gt-追加" class="headerlink" title="&gt; 输出重定向和 &gt;&gt; 追加"></a>&gt; 输出重定向和 &gt;&gt; 追加</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">ls -l &gt;文件      #（功能描述：列表的内容写入文件a.txt中（**覆盖写**））
-ls -al &gt;&gt;文件    #（功能描述：列表的内容**追加**到文件aa.txt的末尾）
-cat 文件1 &gt; 文件2  #（功能描述：将文件1的内容覆盖到文件2）
-echo “内容” &gt;&gt; 文件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="gt-输出重定向和-gt-gt-追加"><a href="#gt-输出重定向和-gt-gt-追加" class="headerlink" title="&gt; 输出重定向和 &gt;&gt; 追加"></a>&gt; 输出重定向和 &gt;&gt; 追加</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">ls</span> -l <span class="token operator">></span>文件      <span class="token comment">#（功能描述：列表的内容写入文件a.txt中（**覆盖写**））</span>
+<span class="token function">ls</span> -al <span class="token operator">>></span>文件    <span class="token comment">#（功能描述：列表的内容**追加**到文件aa.txt的末尾）</span>
+<span class="token function">cat</span> 文件1 <span class="token operator">></span> 文件2  <span class="token comment">#（功能描述：将文件1的内容覆盖到文件2）</span>
+<span class="token builtin class-name">echo</span> “内容” <span class="token operator">>></span> 文件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/image-20220110221433938.png" alt="image-20220110221433938"></p>
 <h3 id="ln-软链接"><a href="#ln-软链接" class="headerlink" title="ln 软链接"></a>ln 软链接</h3><p>软链接也成为符号链接，类似于windows里的快捷方式，有自己的数据块，主要存放了链接其他文件的路径。</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">#功能描述：给原文件创建一个软链接
-ln -s [原文件或目录] [软链接名]		<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token comment">#功能描述：给原文件创建一个软链接</span>
+<span class="token function">ln</span> -s <span class="token punctuation">[</span>原文件或目录<span class="token punctuation">]</span> <span class="token punctuation">[</span>软链接名<span class="token punctuation">]</span>		<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p>删除软链接： rm -rf 软链接名，而不是rm -rf 软链接名/</p>
@@ -3240,11 +3707,11 @@ ln -s [原文件或目录] [软链接名]		<span aria-hidden="true" class="line-
 <h3 id="date-显示非当前时间"><a href="#date-显示非当前时间" class="headerlink" title="date 显示非当前时间"></a>date 显示非当前时间</h3><p>（1）date -d ‘1 days ago’          （功能描述：显示前一天时间）</p>
 <p>（2）date -d ‘-1 days ago’          （功能描述：显示明天时间）</p>
 <p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/image-20220110212713212.png" alt="image-20220110212713212"></p>
-<h3 id="date-设置系统时间"><a href="#date-设置系统时间" class="headerlink" title="date 设置系统时间"></a>date 设置系统时间</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">date -s &quot;字符串时间&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="date-设置系统时间"><a href="#date-设置系统时间" class="headerlink" title="date 设置系统时间"></a>date 设置系统时间</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">date</span> -s <span class="token string">"字符串时间"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/image-20220110212439494.png" alt="image-20220110212439494"></p>
-<h3 id="cal-查看日历"><a href="#cal-查看日历" class="headerlink" title="cal 查看日历"></a>cal 查看日历</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">#功能描述：不加选项，显示本月日历
-cal [选项]			<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="cal-查看日历"><a href="#cal-查看日历" class="headerlink" title="cal 查看日历"></a>cal 查看日历</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token comment">#功能描述：不加选项，显示本月日历</span>
+<span class="token function">cal</span> <span class="token punctuation">[</span>选项<span class="token punctuation">]</span>			<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <table>
 <thead>
@@ -3283,15 +3750,15 @@ cal [选项]			<span aria-hidden="true" class="line-numbers-rows"><span></span><
 <p>-    “i386”是软件所运行的硬件平台，Intel 32位微处理器的统称</p>
 <p>-    “rpm”文件扩展名，代表RPM包</p>
 </blockquote>
-<h3 id="RPM查询命令（rpm-qa）"><a href="#RPM查询命令（rpm-qa）" class="headerlink" title="RPM查询命令（rpm -qa）"></a>RPM查询命令（rpm -qa）</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">#功能描述：查询所安装的所有rpm软件包
-rpm -qa<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="RPM查询命令（rpm-qa）"><a href="#RPM查询命令（rpm-qa）" class="headerlink" title="RPM查询命令（rpm -qa）"></a>RPM查询命令（rpm -qa）</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token comment">#功能描述：查询所安装的所有rpm软件包</span>
+<span class="token function">rpm</span> -qa<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>🚩tips: 由于软件包比较多，一般都会采取过滤。rpm -qa | grep <u>rpm软件包</u></p>
 <p>例如:</p>
 <p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/image-20220110194550746.png" alt="image-20220110194550746"></p>
 <p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/image-20220110194740413.png" alt="image-20220110194740413"></p>
-<h3 id="RPM卸载命令（rpm-e）"><a href="#RPM卸载命令（rpm-e）" class="headerlink" title="RPM卸载命令（rpm -e）"></a>RPM卸载命令（rpm -e）</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">rpm -e RPM软件包   
-rpm -e --nodeps 软件包  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="RPM卸载命令（rpm-e）"><a href="#RPM卸载命令（rpm-e）" class="headerlink" title="RPM卸载命令（rpm -e）"></a>RPM卸载命令（rpm -e）</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">rpm</span> -e RPM软件包   
+<span class="token function">rpm</span> -e --nodeps 软件包  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <table>
 <thead>
@@ -3310,7 +3777,7 @@ rpm -e --nodeps 软件包  <span aria-hidden="true" class="line-numbers-rows"><s
 </tr>
 </tbody></table>
 <p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/image-20220110200041491.png" alt="image-20220110200041491"></p>
-<h3 id="RPM安装命令（rpm-ivh）"><a href="#RPM安装命令（rpm-ivh）" class="headerlink" title="RPM安装命令（rpm -ivh）"></a>RPM安装命令（rpm -ivh）</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">rpm -ivh RPM包全名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="RPM安装命令（rpm-ivh）"><a href="#RPM安装命令（rpm-ivh）" class="headerlink" title="RPM安装命令（rpm -ivh）"></a>RPM安装命令（rpm -ivh）</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">rpm</span> -ivh RPM包全名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <table>
 <thead>
@@ -3341,7 +3808,7 @@ rpm -e --nodeps 软件包  <span aria-hidden="true" class="line-numbers-rows"><s
 
 
 
-<h3 id="YUM的常用命令"><a href="#YUM的常用命令" class="headerlink" title="YUM的常用命令"></a>YUM的常用命令</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">yum [选项] [参数]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="YUM的常用命令"><a href="#YUM的常用命令" class="headerlink" title="YUM的常用命令"></a>YUM的常用命令</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">yum <span class="token punctuation">[</span>选项<span class="token punctuation">]</span> <span class="token punctuation">[</span>参数<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <table>
 <thead>
@@ -3407,7 +3874,7 @@ rpm -e --nodeps 软件包  <span aria-hidden="true" class="line-numbers-rows"><s
 <li><p><strong>替换本地yum文件</strong></p>
 <ul>
 <li><p>把下载的文件移动到/etc/yum.repos.d/目录</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">mv CentOS7-Base-163.repo &#x2F;etc&#x2F;yum.repos.d&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">mv</span> CentOS7-Base-163.repo /etc/yum.repos.d/<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/image-20220110202129083.png" alt="image-20220110202129083"></p>
 </li>
@@ -3424,8 +3891,8 @@ yum makecache<span aria-hidden="true" class="line-numbers-rows"><span></span><sp
 <p>yum makecache就是把服务器的包信息下载到本地电脑缓存起来</p>
 </li>
 <li><p><strong>测试</strong></p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">yum list | grep firefox
-yum -y install firefox.x86_64<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">yum list <span class="token operator">|</span> <span class="token function">grep</span> firefox
+yum -y <span class="token function">install</span> firefox.x86_64<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/image-20220110203411379.png" alt="image-20220110203411379"></p>
 </li>
@@ -3447,566 +3914,9 @@ yum -y install firefox.x86_64<span aria-hidden="true" class="line-numbers-rows">
   </entry>
   <entry>
     <title></title>
-    <url>/2022/02/17/%E5%88%9D%E4%B8%AD%E6%95%B0%E5%AD%A6/</url>
-    <content><![CDATA[<hr>
-<hr>
-]]></content>
-  </entry>
-  <entry>
-    <title>数据库系统概论基础篇重点复习</title>
-    <url>/2022/01/11/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%AE%BA/</url>
-    <content><![CDATA[<h1 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h1><h2 id="数据库的4个基本概念"><a href="#数据库的4个基本概念" class="headerlink" title="数据库的4个基本概念"></a>数据库的4个基本概念</h2><p>数据（Data）: 是描述事物的符号记录,是数据库的基本对象。</p>
-<p>数据库的<br>数据库（Database，简称DB）是长期储存在计算机内、有组织的、可共享的大量数据的集合。<br>数据库的基本特征</p>
-<ul>
-<li>数据按一定的数据模型组织、描述和储存</li>
-<li>可为各种用户共享</li>
-<li>冗余度较小</li>
-<li>数据独立性较高</li>
-<li>易扩展</li>
-</ul>
-<p><img src="C:/Users/clearsky0601/AppData/Roaming/Typora/typora-user-images/image-20220129155109641.png" alt="image-20220129155109641"></p>
-<h1 id="关系数据库"><a href="#关系数据库" class="headerlink" title="关系数据库"></a>关系数据库</h1><h1 id="关系型数据库标准语言SQL"><a href="#关系型数据库标准语言SQL" class="headerlink" title="关系型数据库标准语言SQL"></a>关系型数据库标准语言SQL</h1><h1 id="数据库安全性"><a href="#数据库安全性" class="headerlink" title="数据库安全性"></a>数据库安全性</h1>]]></content>
-      <categories>
-        <category>计算机基础</category>
-      </categories>
-      <tags>
-        <tag>数据库</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2022/01/16/Untitled/</url>
-    <content><![CDATA[<p>博客设置</p>
-<p><a href="https://www.antmoe.com/posts/3b43914f/">https://www.antmoe.com/posts/3b43914f/</a></p>
-<p><a href="https://butterfly.js.org/posts/4aa8abbe/#%E6%96%87%E7%AB%A0meta%E9%A1%AF%E7%A4%BA">https://butterfly.js.org/posts/4aa8abbe/#%E6%96%87%E7%AB%A0meta%E9%A1%AF%E7%A4%BA</a></p>
-<h2 id="新建项目时Pycharm找不到已安装的Python解释器："><a href="#新建项目时Pycharm找不到已安装的Python解释器：" class="headerlink" title="新建项目时Pycharm找不到已安装的Python解释器："></a>新建项目时Pycharm找不到已安装的Python解释器：</h2><p><img src="https://s2.loli.net/2022/01/16/QdeOV4TNxrKbGP6.png" alt="image-20220116101444447"></p>
-<p>pycharm中HTML格式预览乱码问题： <a href="https://blog.csdn.net/weixin_43579798/article/details/111592336">https://blog.csdn.net/weixin_43579798/article/details/111592336</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>爬虫</title>
-    <url>/2022/01/16/%E7%88%AC%E8%99%AB/</url>
-    <content><![CDATA[<p>学习路线：<a href="https://zhuanlan.zhihu.com/p/190256722">https://zhuanlan.zhihu.com/p/190256722</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>线代基础-二次型</title>
-    <url>/2022/01/16/%E7%BA%BF%E4%BB%A3%E5%9F%BA%E7%A1%80-%E4%BA%8C%E6%AC%A1%E5%9E%8B/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>线代基础-行列式</title>
-    <url>/2022/01/16/%E7%BA%BF%E4%BB%A3%E5%9F%BA%E7%A1%80-%E8%A1%8C%E5%88%97%E5%BC%8F/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>网络知识入门</title>
-    <url>/2022/02/05/%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86%E5%85%A5%E9%97%A8/</url>
-    <content><![CDATA[<p>什么是以太网？</p>
-]]></content>
-      <categories>
-        <category>计算机网络</category>
-      </categories>
-      <tags>
-        <tag>基础知识</tag>
-        <tag>入门</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2022/02/17/%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>高数基础-多元函数微分学</title>
-    <url>/2022/01/16/%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80-%E5%A4%9A%E5%85%83%E5%90%AB%E6%98%AF%E5%BE%AE%E5%88%86%E5%AD%A6/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>高数基础-无穷级数</title>
-    <url>/2022/01/16/%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80-%E6%97%A0%E7%A9%B7%E7%BA%A7%E6%95%B0/</url>
-    <content><![CDATA[]]></content>
-      <tags>
-        <tag>微积分</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2022/12/29/12.29%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="12-29笔记"><a href="#12-29笔记" class="headerlink" title="12.29笔记"></a>12.29笔记</h1>]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2022/04/03/2011TEXT4/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2022/04/09/Django%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<h1 id="Django学习"><a href="#Django学习" class="headerlink" title="Django学习"></a>Django学习</h1><p>官网：<a href="https://docs.djangoproject.com/zh-hans/4.0/">https://docs.djangoproject.com/zh-hans/4.0/</a></p>
-<h2 id="Django框架介绍与安装"><a href="#Django框架介绍与安装" class="headerlink" title="Django框架介绍与安装"></a>Django框架介绍与安装</h2><h3 id="Web开发"><a href="#Web开发" class="headerlink" title="Web开发"></a>Web开发</h3><p>目前Web开发属于Browser/Server模式，简称BS架构，开发语言有（Python、PHP、Java …）</p>
-<p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/webjg.png" alt="img"></p>
-<h3 id="Django框架"><a href="#Django框架" class="headerlink" title="Django框架"></a>Django框架</h3><p>框架就是程序的骨架。</p>
-<blockquote>
-<ul>
-<li>Django是一个高级的Python Web框架，它鼓励快速开发和清洁，务实的设计。</li>
-<li>由经验丰富的开发人员构建，它负责Web开发的许多麻烦，因此您可以专注于编写应用程序，而无需重新创建轮子。</li>
-<li>免费的、开源的。</li>
-<li>Django可以更快地构建更好的Web应用程序并减少代码。</li>
-</ul>
-</blockquote>
-<h4 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h4><ul>
-<li>可重用</li>
-<li>成熟,稳健</li>
-<li>易扩展、易维护</li>
-</ul>
-<h4 id="MVC-与-MVT"><a href="#MVC-与-MVT" class="headerlink" title="MVC 与 MVT"></a>MVC 与 MVT</h4><p>MVC：有一种程序设计模式叫<strong>MVC</strong>（Model-View-Controller）<strong>，其核心思想是</strong>分工、解耦，让不同的代码块之间降低耦合，增强代码的可扩展性和可移植性，实现向后兼容**。</p>
-<p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/mvc.png" alt="img"></p>
-<ul>
-<li>m表示model，主要用于对<strong>数据库层的封装</strong></li>
-<li>v表示view，用于<strong>向用户展示结果</strong></li>
-<li>c表示controller，是核心，用于处理请求、获取数据、与Model和View交互、返回结果</li>
-</ul>
-<p>MVT：Django是一款python的web开发框架</p>
-<p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/mvt.png" alt="img"></p>
-<ul>
-<li>m表示model，负责与<strong>数据库交互</strong></li>
-<li>v表示view，是核心，负责接收请求、获取数据、返回结果，与MVC中的C功能相同，接收请求，进行业务处理，返回应答。</li>
-<li>t表示template，负责呈现内容到浏览器，与MVC中的V功能相同，负责封装构造要返回的html。</li>
-</ul>
-<h4 id="Python中常见的框架"><a href="#Python中常见的框架" class="headerlink" title="Python中常见的框架"></a>Python中常见的框架</h4><ul>
-<li>大包大揽 Django 被官方称之为完美主义者的Web框架。</li>
-<li>力求精简 web.py和Tornado</li>
-<li>新生代微框架 Flask和Bottle</li>
-</ul>
-<h2 id="Django安装"><a href="#Django安装" class="headerlink" title="Django安装"></a>Django安装</h2><h3 id="版本"><a href="#版本" class="headerlink" title="版本"></a>版本</h3><blockquote>
-<p>在使用Flask框架时，项目工程目录的组织与创建是需要我们自己手动创建完成的。</p>
-<p>在django中，项目工程目录可以借助django提供的命令帮助我们创建。</p>
-<p>Django自带一个实用程序，可以自动生成应用程序的基本目录结构，因此您可以专注于编写代码而不是创建目录。</p>
-</blockquote>
-<h2 id="创建项目与运行"><a href="#创建项目与运行" class="headerlink" title="创建项目与运行"></a>创建项目与运行</h2><p>从命令行cd到您要存储代码的目录，然后运行以下命令：</p>
-<h3 id="创建Django项目"><a href="#创建Django项目" class="headerlink" title="创建Django项目"></a><strong>创建Django项目</strong></h3><pre class="line-numbers language-none"><code class="language-none">django-admin startproject name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>文件结构：</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[root@localhost myweb]# tree
-.
-├── manage.py #项目管理文件，通过它管理项目, 与此Django项目进行交互
-└── myweb 
-    ├── __init__.py   # 一个空的文件，告诉Python这个目录应该被认为是一个Python包，python包的初始化文件
-    ├── settings.py   # 配置文件
-    ├── urls.py    # URL配置文件，主路由配置
-    └── wsgi.py    # 项目与WSGI兼容的Web服务器入口<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="运行新建的项目"><a href="#运行新建的项目" class="headerlink" title="运行新建的项目"></a>运行新建的项目</h4><pre class="line-numbers language-none"><code class="language-none">python manage.py runserver<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><strong>可以不写IP和端口，默认IP是127.0.0.1，默认端口为8000</strong>。</p>
-<p>也可以指定端口开启服务,如8080端口：</p>
-<pre class="line-numbers language-none"><code class="language-none">python manage.py runserver 8080<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-
-
-
-<h2 id="settings-py"><a href="#settings-py" class="headerlink" title="settings.py"></a>settings.py</h2><p>所用参数参考论坛：<a href="https://blog.csdn.net/lichangrui2009/article/details/86487346">https://blog.csdn.net/lichangrui2009/article/details/86487346</a></p>
-<p>配置项分为<strong>公有配置</strong>和<strong>自定义配置</strong></p>
-<p>配置项格式：<img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/image-20220414122731494.png" alt="image-20220414122731494" style="zoom: 50%;" /></p>
-<h3 id="url"><a href="#url" class="headerlink" title="url"></a>url</h3><p>url请求：</p>
-<p>url.py</p>
-<p>Path函数:</p>
-<p>Django path() 可以接收四个参数，两个必选参数：route、view 和两个可选参数：kwargs、name。</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">path<span class="token punctuation">(</span>route<span class="token punctuation">,</span> view<span class="token punctuation">,</span> kwargs<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-
-<ul>
-<li>route: 字符串，表示 URL 规则，与之匹配的 URL 会执行对应的第二个参数 view。</li>
-<li>view: 用于执行与正则表达式匹配的 URL 请求。</li>
-<li>kwargs: 视图使用的字典类型的参数。</li>
-<li>name: 用来反向获取 URL。</li>
-</ul>
-<h2 id="模板："><a href="#模板：" class="headerlink" title="模板："></a>模板：</h2><p>render函数：<a href="https://zhuanlan.zhihu.com/p/366730772">https://zhuanlan.zhihu.com/p/366730772</a></p>
-<h3 id="视图函数"><a href="#视图函数" class="headerlink" title="视图函数"></a>视图函数</h3><h3 id="创建子应用"><a href="#创建子应用" class="headerlink" title="创建子应用"></a><strong>创建子应用</strong></h3><pre class="line-numbers language-none"><code class="language-none">python manager.py startapp name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>文件结构：</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[root@localhost demo]# tree myweb&#x2F;
-myweb&#x2F;
-├── manage.py
-├── myweb
-│   ├── __init__.py
-│   ├── settings.py #配置文件
-│   ├── urls.py
-│   └── wsgi.py
-└── myapp
-    ├── admin.py   # 后台管理配置
-    ├── apps.py    #配置当前子应用的相关信息
-    ├── __init__.py
-    ├── migrations #存放数据库迁移历史文件
-    │   └── __init__.py  
-    ├── models.py #保存数据库模型类
-    ├── tests.py #开发测试用例，编写单元测试
-    └── views.py #编写Web应用视图<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<p>编写</p>
-<p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/image-20220414131539936.png" alt="image-20220414131539936"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>HTML</title>
-    <url>/2022/01/16/HTML%E4%B8%8ECSS/</url>
-    <content><![CDATA[<p>参考资料：</p>
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>HTML是什么？</p>
-<blockquote>
-<p>•HTML是 HyperText Mark-up Language 的首字母简写，即超文本标记语言，非编程语言！</p>
-<p>•扩展名为.html或者.htm</p>
-</blockquote>
-<p>HTML基本结构</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span> <span class="token comment">&lt;!--第一行&lt;!DOCTYPE html>是文档声明, 用来指定页面所使用的html的版本, 这里声明的是一个html5的文档。--></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>网页标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
-         <span class="token comment">&lt;!--   此处可以写各种头属性设置、CSS样式和JavaScript脚本等...   --></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
-    
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
-        <span class="token comment">&lt;!--   此处为网页显示内容...   --></span>
-    	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>我的第一个标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
-    	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>我的第一个段落。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<p>有关“&lt;!DOCTYPE&gt; 声明”：不区分大小写</p>
-<p>•HTML是由：<strong>标签</strong>和<strong>内容</strong>构成</p>
-<p>•HTML标签（标记）的语法是由 &lt; 和 &gt; 括起来。</p>
-<p>•HTML标签有两种：</p>
-<ul>
-<li>双标签：&lt;标签名&gt;….&lt;/标签名&gt; </li>
-<li>单标签：&lt;标签名/&gt;</li>
-</ul>
-<p>•HTML标签中还可以添加属性：</p>
-<p>​      &lt;标签名 属性名1=“值1” 属性名2=“值2” 属性名n=“值n”&gt;….&lt;/标签名&gt;</p>
-<p>•HTML标签规范：标签名小写、标签要闭合。</p>
-<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token comment">&lt;!--   这就是唯一的一种HTML注释了   --></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-
-
-
-
-
-
-
-<h2 id="VS-code"><a href="#VS-code" class="headerlink" title="VS code"></a>VS code</h2><h3 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h3><p>vscode 中使用浏览器打开 html 文件需要 安装**”open in browser”** 扩展。</p>
-<h2 id="头部信息"><a href="#头部信息" class="headerlink" title="头部信息"></a>头部信息</h2><pre class="line-numbers language-none"><code class="language-none">设置网页编码：       &lt;meta charset&#x3D;&quot;utf-8&quot;&#x2F;&gt;
-关键字:        	 &lt;meta name&#x3D;&quot;Keywords&quot; content&#x3D;&quot;关键字&quot; &#x2F;&gt;
-描述:            	 &lt;meta name&#x3D;&quot;Description&quot; content&#x3D;&quot;简介、描述&quot; &#x2F;&gt;
-网页标题:        	 &lt;title&gt;本网页标题&lt;&#x2F;title&gt;
-导入CSS文件:        &lt;link type&#x3D;&quot;text&#x2F;css&quot; rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;**.css&quot;&#x2F;&gt;
-CSS代码：    	    &lt;style type&#x3D;&quot;text&#x2F;css&quot;&gt;嵌入css样式代码&lt;&#x2F;style&gt;
-JS文件或代码:	   &lt;script &gt;。。。&lt;&#x2F;script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>中文字符声明为 UTF-8 或 GBK。</p>
-<h2 id="HTML常用标签介绍"><a href="#HTML常用标签介绍" class="headerlink" title="HTML常用标签介绍"></a>HTML常用标签介绍</h2><h2 id="1-文本标签"><a href="#1-文本标签" class="headerlink" title="1.文本标签"></a>1.文本标签</h2><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>hn</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>hn</span><span class="token punctuation">></span></span>  其中n为1--6的值。 标题标签（加粗、独立行）
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>  斜体
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>em</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>em</span><span class="token punctuation">></span></span>  强调斜体
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>b</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>b</span><span class="token punctuation">></span></span>  加粗
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">></span></span>  强调加粗
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>cite</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>cite</span><span class="token punctuation">></span></span>  作品的标题（引用）
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sub</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sub</span><span class="token punctuation">></span></span>下标 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sup</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sup</span><span class="token punctuation">></span></span> 上标
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>del</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>del</span><span class="token punctuation">></span></span>  删除线<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h2 id="2-格式化标签"><a href="#2-格式化标签" class="headerlink" title="2.格式化标签"></a>2.格式化标签</h2><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">/></span></span>           换行
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span> 换段
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>hr</span> <span class="token punctuation">/></span></span>          水平分割线
-列表：
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>    无序列表
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ol</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ol</span><span class="token punctuation">></span></span>    有序列表 其中type类型值：A a I i 1 start属性表示起始值
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>        列表项
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dl</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dl</span><span class="token punctuation">></span></span>     自定义列表
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dt</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dt</span><span class="token punctuation">></span></span>    自定义列表头
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dd</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dd</span><span class="token punctuation">></span></span>  自定义列表内容
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>   常用于组合块级元素，以便通过 CSS 来对这些元素进行格式化
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span> 常用于包含的文本，您可以使用 CSS 对它定义样式，或者使用 JavaScript 对它进行操作。
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h2 id="3-图片标签"><a href="#3-图片标签" class="headerlink" title="3.图片标签"></a>3.图片标签</h2><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token punctuation">/></span></span> 在网页中插入一张图片
-    属性：
-		src： 图片名及url地址
-		alt: 图片加载失败时的提示信息
-		title：文字提示属性
-		width：图片宽度
-		height：图片高度
-		border：边框线粗细<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h2 id="4-超级链接标签"><a href="#4-超级链接标签" class="headerlink" title="4.超级链接标签"></a>4.超级链接标签</h2><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span>“</span> <span class="token attr-name">”</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span> 超级链接标签， 属性如下：
-	href: 必须，指的是链接跳转地址
-	target: 表示链接的打开方式：
-	_blank  新窗口
-	_parent 父窗口
-	_self   本窗口（默认）
-     _top    顶级窗口
-	framename 窗口名
- 	title：文字提示属性（详情）
-
-锚点链接：
-	定义一个锚点：<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>a1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span> 以前使用的是 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>a1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
- 	使用锚点：    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#a1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>跳到a1处<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h2 id="5-表格标签"><a href="#5-表格标签" class="headerlink" title="5.表格标签"></a>5.表格标签</h2><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>table</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>table</span><span class="token punctuation">></span></span>  表格标签: 属性：border、 width、 cellspacing、 cellpadding
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>caption</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>caption</span><span class="token punctuation">></span></span> 表格标题
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>  行标签
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">></span></span>  列头标签
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>  列标签: 跨行属性：rowspan  跨列属性：colspan   
-
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>thead</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>thead</span><span class="token punctuation">></span></span>  表头
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tbody</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tbody</span><span class="token punctuation">></span></span>  表体
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tfoot</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tfoot</span><span class="token punctuation">></span></span>  表尾
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h2 id="6-表单标签"><a href="#6-表单标签" class="headerlink" title="6.表单标签"></a>6.表单标签</h2><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span>     表单标签
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token punctuation">/></span></span> 	           表单项标签input定义输入字段，用户可在其中输入数据。
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>select</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>select</span><span class="token punctuation">></span></span> 标签创建下拉列表。
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>textarea</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>textarea</span><span class="token punctuation">></span></span> 多行的文本输入区域
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>       标签定义按钮。
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>fieldset</span><span class="token punctuation">></span></span> --<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>fieldset</span><span class="token punctuation">></span></span>     元素可将表单内的相关元素分组。
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>legend</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>legend</span><span class="token punctuation">></span></span>           标签为 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>fieldset</span><span class="token punctuation">></span></span>、<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>figure</span><span class="token punctuation">></span></span> 以及 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>details</span><span class="token punctuation">></span></span> 元素定义标题。
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>datalist</span><span class="token punctuation">></span></span> html5标签--<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>datalist</span><span class="token punctuation">></span></span>         标签定义可选数据的列表。
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>optgroup</span><span class="token punctuation">></span></span> html5标签--<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>optgroup</span><span class="token punctuation">></span></span> 标签定义选项组。
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h2 id="7-行内框架标签"><a href="#7-行内框架标签" class="headerlink" title="7.行内框架标签"></a>7.行内框架标签</h2><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>iframe</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>iframe</span><span class="token punctuation">></span></span> 行内框架
-     属性：
-              src：规定在 iframe 中显示的文档的 URL
-      name：规定 iframe 的名称
-      height：规定 iframe 的高度。
-      width：定义 iframe 的宽度。
-      frameborder：规定是否显示框架周围的边框。
-例如：<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>iframe</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1.html<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>myframe<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>700<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>500<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>iframe</span><span class="token punctuation">></span></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h2 id="8-多媒体标签"><a href="#8-多媒体标签" class="headerlink" title="8.多媒体标签"></a>8.多媒体标签</h2><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>audio</span><span class="token punctuation">></span></span>…<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>audio</span><span class="token punctuation">></span></span>   音频标签
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>video</span><span class="token punctuation">></span></span>…<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>video</span><span class="token punctuation">></span></span>   视频标签
-播放Flash的标签
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>embed</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>./images/haowan.swf<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>300<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>300<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-
-
-<h1 id="CSS-层叠样式表"><a href="#CSS-层叠样式表" class="headerlink" title="CSS 层叠样式表"></a>CSS 层叠样式表</h1><h2 id="什么是-CSS"><a href="#什么是-CSS" class="headerlink" title="什么是 CSS"></a>什么是 CSS</h2><p>CSS 指层叠样式表 (Cascading Style Sheets)</p>
-<blockquote>
-<p>•样式定义如何显示控制 HTML 元素,从而实现美化HTML网页。</p>
-<p>•样式通常存储在样式表中，目的也是为了解决内容与表现分离的问题</p>
-<p>•外部样式表(CSS文件)可以极大提高工作效率</p>
-<p>•多个样式定义可层叠为一，后者可以覆盖前者样式</p>
-</blockquote>
-<p>css 是由两个主要的部分构成：<strong>选择器和一条或多条样式规则</strong>，注意:<strong>样式规则需要放到大括号里面。</strong></p>
-<p>CSS 可以通过以下方式添加到HTML中:</p>
-<ul>
-<li>内联样式- 在HTML元素中使用”style” <strong>属性</strong></li>
-<li>内部样式表 -在HTML文档头部 <head> 区域使用<style> <strong>元素</strong> 来包含CSS</li>
-<li>外部引用 - 使用外部 CSS <strong>文件</strong></li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2022/03/30/HTTP%E5%8D%8F%E8%AE%AE%E5%92%8C%E9%9D%99%E6%80%81Web%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
-    <content><![CDATA[<hr>
-<hr>
-<h1 id="HTTP协议和静态Web服务器"><a href="#HTTP协议和静态Web服务器" class="headerlink" title="HTTP协议和静态Web服务器"></a>HTTP协议和静态Web服务器</h1><h2 id="HTTP-协议"><a href="#HTTP-协议" class="headerlink" title="HTTP 协议"></a>HTTP 协议</h2><p>HTTP 协议的全称是(HyperText Transfer Protocol)，翻译过来就是<strong>超文本传输协议</strong>。</p>
-<p>传输 HTTP 协议格式的数据是基于 TCP 传输协议的，<strong>发送数据之前需要先建立连接。</strong></p>
-<p>它<strong>规定了浏览器和 Web 服务器通信数据的格式，也就是说浏览器和web服务器通信需要使用http协议</strong>。</p>
-<p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/%E8%AE%BF%E9%97%AEweb%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E9%80%9A%E4%BF%A1%E8%BF%87%E7%A8%8B.png" alt="通信效果图"></p>
-<h2 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h2><p>URL的英文全拼是(Uniform Resoure Locator),表达的意思是统一资源定位符，通俗理解就是网络资源地址，也就是我们常说的网址。</p>
-<p><strong>URL的样子:</strong></p>
-<p><a href="https://news.163.com/18/1122/10/E178J2O4000189FH.html">https://news.163.com/18/1122/10/E178J2O4000189FH.html</a></p>
-<p><strong>URL的组成部分:</strong></p>
-<ol>
-<li><strong>协议部分</strong>: https://、http://、ftp://</li>
-<li><strong>域名部分</strong>: news.163.com</li>
-<li><strong>资源路径部分</strong>: /18/1122/10/E178J2O4000189FH.html</li>
-</ol>
-<p><strong>域名:</strong></p>
-<p>域名就是<strong>IP地址的别名</strong>，它是用点进行分割使用英文字母和数字组成的名字，<strong>使用域名目的就是方便的记住某台主机IP地址</strong>。</p>
-<p><strong>URL的扩展:</strong></p>
-<p><a href="https://news.163.com/hello.html?page=1&amp;count=10">https://news.163.com/hello.html?page=1&amp;count=10</a></p>
-<ul>
-<li><strong>查询参数部分</strong>: ?page=1&amp;count=10</li>
-</ul>
-<p><strong>参数说明:</strong></p>
-<ul>
-<li> 后面的 page 表示第一个参数，后面的参数都使用 &amp; 进行连接</li>
-</ul>
-<h2 id="查看HTTP协议的通信过程"><a href="#查看HTTP协议的通信过程" class="headerlink" title="查看HTTP协议的通信过程"></a>查看HTTP协议的通信过程</h2><ul>
-<li>元素（Elements）：用于查看或修改HTML标签</li>
-<li>控制台（Console）：执行js代码</li>
-<li>源代码（Sources）：查看静态资源文件，断点调试JS代码</li>
-<li>网络（Network）：查看http协议的通信过程</li>
-</ul>
-<p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/image-20220330204419470.png" alt="image-20220330204419470"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2022/04/08/Ubuntu%E4%BF%AE%E6%94%B9%E9%9D%99%E6%80%81ip/</url>
-    <content><![CDATA[<h1 id="Ubuntu20-04"><a href="#Ubuntu20-04" class="headerlink" title="Ubuntu20.04"></a>Ubuntu20.04</h1><h1 id="Ubuntu-Apt-如何使用清华源"><a href="#Ubuntu-Apt-如何使用清华源" class="headerlink" title="Ubuntu Apt 如何使用清华源"></a>Ubuntu Apt 如何使用清华源</h1><p>Ubuntu默认的apt源由于在国外，速度特别的慢，使用清华源，能实现快速安装想要的软件。</p>
-<h1 id="设置静态ip"><a href="#设置静态ip" class="headerlink" title="设置静态ip:"></a>设置静态ip:</h1><p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/image-20220408134311500.png" alt="image-20220408134311500"></p>
-<p><img src="C:/Users/clearsky0601/AppData/Roaming/Typora/typora-user-images/image-20220408134239745.png" alt="image-20220408134239745"></p>
-<p>进入配置目录</p>
-<pre class="line-numbers language-none"><code class="language-none">cd &#x2F;etc&#x2F;netplan<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>修改配置文件:</p>
-<pre class="line-numbers language-none"><code class="language-none">sudo vim 00-installer-config.yaml<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<pre class="line-numbers language-none"><code class="language-none">network:
-  version: 2
-  renderer: NetworkManager
-  ethernets:
-    ens33:      # 配置的网卡名称，可以使用ifconfig -a查看本机的网卡
-      dhcp4: no #  关闭动态IP设置，因为要设置固定IP
-      addresses: [192.168.10.110&#x2F;24] # 要设置的固定IP，后面的24为子网掩码的位数
-      gateway4: 192.168.10.2    # 要设置的网关地址
-      nameservers:
-        addresses: [114.114.114.114,8.8.8.8]    # 要设置的DNS地址<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>生效:</p>
-<pre class="line-numbers language-none"><code class="language-none">sudo netplan apply<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-
-
-
-
-
-
-
-
-
-<h1 id="apt换成清华源"><a href="#apt换成清华源" class="headerlink" title="apt换成清华源"></a>apt换成清华源</h1><p><a href="https://blog.csdn.net/qq_42620328/article/details/116313697">https://blog.csdn.net/qq_42620328/article/details/116313697</a></p>
-<h1 id="连接Xshell"><a href="#连接Xshell" class="headerlink" title="连接Xshell"></a>连接Xshell</h1><p><a href="https://www.cnblogs.com/jiumo/p/13297831.html">https://www.cnblogs.com/jiumo/p/13297831.html</a></p>
-<p>​    </p>
-<pre class="line-numbers language-none"><code class="language-none">sudo apt-get install openssh-server openssh-client<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<p><a href="https://blog.csdn.net/qq_39086076/article/details/80520672">https://blog.csdn.net/qq_39086076/article/details/80520672</a></p>
-<h1 id="管理员密码"><a href="#管理员密码" class="headerlink" title="管理员密码"></a>管理员密码</h1><p><a href="https://blog.csdn.net/wu_wxc/article/details/48861891">https://blog.csdn.net/wu_wxc/article/details/48861891</a></p>
-<h1 id="文件管理"><a href="#文件管理" class="headerlink" title="文件管理"></a>文件管理</h1><h2 id="1、opt目录"><a href="#1、opt目录" class="headerlink" title="1、opt目录"></a>1、opt目录</h2><p>/opt目录用来安装附加软件包，是用户级的程序目录，可以理解为D:/Software。安装到/opt目录下的程序，它所有的数据、库文件等等都是放在同个目录下面。opt有可选的意思，这里可以用于放置第三方大型软件（或游戏），当你不需要时，直接rm -rf掉即可。在硬盘容量不够时，也可将/opt单独挂载到其他磁盘上使用。</p>
-<h2 id="2、-usr目录"><a href="#2、-usr目录" class="headerlink" title="2、/usr目录"></a>2、/usr目录</h2><p>/usr：系统级的目录，可以理解为C:/Windows/。<br>/usr/lib：理解为C:/Windows/System32。<br>/usr/local：用户级的程序目录，可以理解为C:/Progrem Files/。用户自己编译的软件默认会安装到这个目录下。 这里主要存放那些手动安装的软件，即不是通过“yum”或apt-get安装的软件。它和/usr目录具有相类似的目录结构。让软件包管理器来管理/usr目录，而把自定义的脚本(scripts)放到/usr/local目录下面。</p>
-<h2 id="3、源码放哪里"><a href="#3、源码放哪里" class="headerlink" title="3、源码放哪里"></a>3、源码放哪里</h2><p>/usr/src：系统级的源码目录。<br>/usr/local/src：用户级的源码目录。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2022/04/27/Ubuntu%E5%A5%BD%E7%94%A8%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<p><a href="http://t.zoukankan.com/silence-cc-p-8970374.html">http://t.zoukankan.com/silence-cc-p-8970374.html</a></p>
-<p><a href="https://blog.csdn.net/OKasy/article/details/79485436">https://blog.csdn.net/OKasy/article/details/79485436</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2022/04/07/centos%E4%B8%8B%E8%BD%BDChrome%E6%B5%8F%E8%A7%88%E5%99%A8/</url>
-    <content><![CDATA[<h1 id="centos下载Chrome浏览器-pycharm"><a href="#centos下载Chrome浏览器-pycharm" class="headerlink" title="centos下载Chrome浏览器/pycharm"></a>centos下载Chrome浏览器/pycharm</h1><p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/image-20220407104122910.png" alt="image-20220407104122910"></p>
-<p>/usr： 系统级的目录，可以理解为C:/Windows/；/usr/bin 存放应用程序；/usr/share 存放共享数据，/usr/lib 存放不能直接运行的，却是许多程序运行所必需的一些函数库文件，可以理解为C:/Windows/System32<br>*比如Java的安装目录，我会放在这里。</p>
-<p>/usr/local：用户级的程序目录，可以理解为C:/Progrem Files/。<br>用户自己编译的软件默认会安装到这个目录下。<br>*比如Hadoop，Tomcat的安装目录我一般会放在/usr/目录下</p>
-<p>/opt：给主机额外安装软件所摆放的目录。用户级的程序目录，可以理解为D:/Software，opt有可选的意思，这里可以用于放置第三方大型软件（或游戏），当你不需要时，直接rm -rf掉即可。在硬盘容量不够时，也可将/opt单独挂载到其他磁盘上使用。<br>*比如临时上传到Linux里的软件；tar.gz rpm等文件，用作软件仓库。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2022/04/27/conda%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h1 id="conda安装："><a href="#conda安装：" class="headerlink" title="conda安装："></a>conda安装：</h1><p>参考文档：</p>
-<p><a href="https://zhuanlan.zhihu.com/p/426655323">https://zhuanlan.zhihu.com/p/426655323</a></p>
-<p><a href="https://www.csdn.net/tags/OtDaYgwsOTgxMi1ibG9n.html">https://www.csdn.net/tags/OtDaYgwsOTgxMi1ibG9n.html</a></p>
-<h2 id="安装："><a href="#安装：" class="headerlink" title="安装："></a>安装：</h2><p>下载地址：<a href="https://www.anaconda.com/products/distribution#Downloads">https://www.anaconda.com/products/distribution#Downloads</a></p>
-<img src="/home/clearsky0601/snap/typora/57/.config/Typora/typora-user-images/image-20220427202508607.png" alt="image-20220427202508607" style="zoom: 67%;" />
-
-<p>下载<strong>Linux 64-Bit (x86) installer</strong>;</p>
-<p>拷贝至/usr/local/lib下</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">cp</span> Anaconda3-2021.11-Linux-x86_64.sh /usr/local/lib<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">bash</span> Anaconda3-2021.11-Linux-x86_64.sh <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>看到提示回答yes，然后安装（可以指定安装目录）。</p>
-<h1 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h1><p>编辑.bashrc文件：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">vim</span> ~/.bashrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<blockquote>
-</blockquote>
-<p>在文件的最后添加行：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=~</span>/anaconda3/bin:<span class="token environment constant">$PATH</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">source</span> ~/.bashrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-
-
-
-
-
-<h1 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h1>]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2022/04/16/ubuntu%20%E9%A1%B9%E7%9B%AE%E6%8A%A5%E9%94%99/</url>
-    <content><![CDATA[<h2 id="成功解决AttributeError-‘str‘-object-has-no-attribute-‘decode‘"><a href="#成功解决AttributeError-‘str‘-object-has-no-attribute-‘decode‘" class="headerlink" title="成功解决AttributeError: ‘str‘ object has no attribute ‘decode‘"></a>成功解决AttributeError: ‘str‘ object has no attribute ‘decode‘</h2><p><a href="https://blog.csdn.net/qq_41185868/article/details/82079079">https://blog.csdn.net/qq_41185868/article/details/82079079</a></p>
-<p><a href="https://blog.csdn.net/adminkeys/article/details/116645454">https://blog.csdn.net/adminkeys/article/details/116645454</a></p>
-<p><a href="https://blog.csdn.net/Jason_WangYing/article/details/107419793">https://blog.csdn.net/Jason_WangYing/article/details/107419793</a></p>
-<p><a href="https://blog.csdn.net/weixin_43886133/article/details/102937338">https://blog.csdn.net/weixin_43886133/article/details/102937338</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
     <url>/2022/04/16/ubuntu%E9%85%8D%E7%BD%AEJDK%E7%8E%AF%E5%A2%83/</url>
     <content><![CDATA[<h1 id="ubuntu-配置JDK环境"><a href="#ubuntu-配置JDK环境" class="headerlink" title="ubuntu 配置JDK环境"></a>ubuntu 配置JDK环境</h1><p><a href="https://blog.csdn.net/pxmxx/article/details/80106239">https://blog.csdn.net/pxmxx/article/details/80106239</a></p>
 <p><a href="https://blog.csdn.net/u012571731/article/details/92831162">https://blog.csdn.net/u012571731/article/details/92831162</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2022/04/13/web%E5%89%8D%E6%AE%B5%E5%BC%80%E5%8F%91/</url>
-    <content><![CDATA[<p>见E盘笔记文件Xind</p>
 ]]></content>
   </entry>
   <entry>
@@ -4022,14 +3932,31 @@ JS文件或代码:	   &lt;script &gt;。。。&lt;&#x2F;script&gt;<span aria-hid
   </entry>
   <entry>
     <title></title>
-    <url>/2022/04/02/%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A4%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<h1 id="协同过滤算法学习"><a href="#协同过滤算法学习" class="headerlink" title="协同过滤算法学习"></a>协同过滤算法学习</h1><h2 id=""><a href="#" class="headerlink" title=""></a></h2><h2 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h2><p>物以类聚，人以群分。 </p>
-<h2 id="相似度"><a href="#相似度" class="headerlink" title="相似度"></a>相似度</h2>]]></content>
+    <url>/2022/04/16/ubuntu%20%E9%A1%B9%E7%9B%AE%E6%8A%A5%E9%94%99/</url>
+    <content><![CDATA[<h2 id="成功解决AttributeError-‘str‘-object-has-no-attribute-‘decode‘"><a href="#成功解决AttributeError-‘str‘-object-has-no-attribute-‘decode‘" class="headerlink" title="成功解决AttributeError: ‘str‘ object has no attribute ‘decode‘"></a>成功解决AttributeError: ‘str‘ object has no attribute ‘decode‘</h2><p><a href="https://blog.csdn.net/qq_41185868/article/details/82079079">https://blog.csdn.net/qq_41185868/article/details/82079079</a></p>
+<p><a href="https://blog.csdn.net/adminkeys/article/details/116645454">https://blog.csdn.net/adminkeys/article/details/116645454</a></p>
+<p><a href="https://blog.csdn.net/Jason_WangYing/article/details/107419793">https://blog.csdn.net/Jason_WangYing/article/details/107419793</a></p>
+<p><a href="https://blog.csdn.net/weixin_43886133/article/details/102937338">https://blog.csdn.net/weixin_43886133/article/details/102937338</a></p>
+]]></content>
   </entry>
   <entry>
-    <title>学习资料</title>
-    <url>/2024/08/29/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/</url>
-    <content><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a></h1>]]></content>
+    <title></title>
+    <url>/2022/04/13/web%E5%89%8D%E6%AE%B5%E5%BC%80%E5%8F%91/</url>
+    <content><![CDATA[<p>见E盘笔记文件Xind</p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022/02/17/%E5%88%9D%E4%B8%AD%E6%95%B0%E5%AD%A6/</url>
+    <content><![CDATA[<hr>
+<hr>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022/03/30/%E4%BF%AE%E6%94%B9%E9%A2%9C%E8%89%B2/</url>
+    <content><![CDATA[<p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/image-20220330233744781.png" alt="image-20220330233744781"></p>
+]]></content>
   </entry>
   <entry>
     <title>个人博客搭建</title>
@@ -4081,23 +4008,35 @@ hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
   </entry>
   <entry>
     <title></title>
-    <url>/2022/03/30/%E4%BF%AE%E6%94%B9%E9%A2%9C%E8%89%B2/</url>
-    <content><![CDATA[<p><img src="https://gitee.com/clearsky0601/picdemo01/raw/master/img/image-20220330233744781.png" alt="image-20220330233744781"></p>
-]]></content>
+    <url>/2022/04/02/%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A4%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<h1 id="协同过滤算法学习"><a href="#协同过滤算法学习" class="headerlink" title="协同过滤算法学习"></a>协同过滤算法学习</h1><h2 id=""><a href="#" class="headerlink" title=""></a></h2><h2 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h2><p>物以类聚，人以群分。 </p>
+<h2 id="相似度"><a href="#相似度" class="headerlink" title="相似度"></a>相似度</h2>]]></content>
   </entry>
   <entry>
-    <title></title>
-    <url>/2022/04/17/%E8%AE%BA%E6%96%87%E6%A0%BC%E5%BC%8F%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p>论文格式：</p>
-<p><a href="https://www.bilibili.com/video/BV1cL4y177Ru?spm_id_from=333.337.search-card.all.click">https://www.bilibili.com/video/BV1cL4y177Ru?spm_id_from=333.337.search-card.all.click</a></p>
-<p>校内VPN：</p>
-<p><a href="https://webvpn.sdyu.edu.cn/https/77726476706e69737468656265737421f9fe458f69236c496b468ca88d1b203b/cas/login?service=https://webvpn.sdyu.edu.cn/login?cas_login=true#/">https://webvpn.sdyu.edu.cn/https/77726476706e69737468656265737421f9fe458f69236c496b468ca88d1b203b/cas/login?service=https%3A%2F%2Fwebvpn.sdyu.edu.cn%2Flogin%3Fcas_login%3Dtrue#/</a></p>
-]]></content>
+    <title>学习资料</title>
+    <url>/2024/08/29/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/</url>
+    <content><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a></h1>]]></content>
   </entry>
   <entry>
-    <title></title>
-    <url>/2022/04/09/%E8%80%83%E7%A0%94%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a></h1><h1 id="考研总结"><a href="#考研总结" class="headerlink" title="考研总结"></a>考研总结</h1><h1 id="教训"><a href="#教训" class="headerlink" title="教训:"></a>教训:</h1><h3 id="努力程度远远不够-不自律"><a href="#努力程度远远不够-不自律" class="headerlink" title="努力程度远远不够,不自律"></a>努力程度远远不够,不自律</h3><h3 id="做了很多无用功"><a href="#做了很多无用功" class="headerlink" title="做了很多无用功"></a>做了很多无用功</h3><h3 id="自我认知不足"><a href="#自我认知不足" class="headerlink" title="自我认知不足."></a>自我认知不足.</h3><h3 id="客观因素"><a href="#客观因素" class="headerlink" title="客观因素"></a>客观因素</h3><h1 id="各个学科的情况"><a href="#各个学科的情况" class="headerlink" title="各个学科的情况:"></a>各个学科的情况:</h1><h2 id="数学"><a href="#数学" class="headerlink" title="数学:"></a>数学:</h2><h2 id="英语"><a href="#英语" class="headerlink" title="英语:"></a>英语:</h2><h2 id="专业课"><a href="#专业课" class="headerlink" title="专业课:"></a>专业课:</h2><h2 id="政治"><a href="#政治" class="headerlink" title="政治:"></a>政治:</h2>]]></content>
+    <title>数据库系统概论基础篇重点复习</title>
+    <url>/2022/01/11/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%AE%BA/</url>
+    <content><![CDATA[<h1 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h1><h2 id="数据库的4个基本概念"><a href="#数据库的4个基本概念" class="headerlink" title="数据库的4个基本概念"></a>数据库的4个基本概念</h2><p>数据（Data）: 是描述事物的符号记录,是数据库的基本对象。</p>
+<p>数据库的<br>数据库（Database，简称DB）是长期储存在计算机内、有组织的、可共享的大量数据的集合。<br>数据库的基本特征</p>
+<ul>
+<li>数据按一定的数据模型组织、描述和储存</li>
+<li>可为各种用户共享</li>
+<li>冗余度较小</li>
+<li>数据独立性较高</li>
+<li>易扩展</li>
+</ul>
+<p><img src="C:/Users/clearsky0601/AppData/Roaming/Typora/typora-user-images/image-20220129155109641.png" alt="image-20220129155109641"></p>
+<h1 id="关系数据库"><a href="#关系数据库" class="headerlink" title="关系数据库"></a>关系数据库</h1><h1 id="关系型数据库标准语言SQL"><a href="#关系型数据库标准语言SQL" class="headerlink" title="关系型数据库标准语言SQL"></a>关系型数据库标准语言SQL</h1><h1 id="数据库安全性"><a href="#数据库安全性" class="headerlink" title="数据库安全性"></a>数据库安全性</h1>]]></content>
+      <categories>
+        <category>计算机基础</category>
+      </categories>
+      <tags>
+        <tag>数据库</tag>
+      </tags>
   </entry>
   <entry>
     <title></title>
@@ -4246,5 +4185,66 @@ hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
 <p><a href="https://baike.baidu.com/reference/407313/0df3jqIsC8lRmt2reKF-sE2epuzhG4px549nLKkotXqRKVTsDelzihcXYZ5YKV0MMquL2C53OQK9Vripd07Q5QO6dWR7FgCzvtGKPZMIbEk"><br>Python 教程 — Python 3.9.1 文档 </a> ．Python官方．2020-10-05[引用日期2020-12-28]</p>
 <h3 id="MySQL数据库技术"><a href="#MySQL数据库技术" class="headerlink" title="MySQL数据库技术"></a>MySQL数据库技术</h3><h3 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h3><p>技术网站：<a href="https://www.jianshu.com/p/d082f7e5b5cb">https://www.jianshu.com/p/d082f7e5b5cb</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>爬虫</title>
+    <url>/2022/01/16/%E7%88%AC%E8%99%AB/</url>
+    <content><![CDATA[<p>学习路线：<a href="https://zhuanlan.zhihu.com/p/190256722">https://zhuanlan.zhihu.com/p/190256722</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>线代基础-行列式</title>
+    <url>/2022/01/16/%E7%BA%BF%E4%BB%A3%E5%9F%BA%E7%A1%80-%E8%A1%8C%E5%88%97%E5%BC%8F/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>线代基础-二次型</title>
+    <url>/2022/01/16/%E7%BA%BF%E4%BB%A3%E5%9F%BA%E7%A1%80-%E4%BA%8C%E6%AC%A1%E5%9E%8B/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>网络知识入门</title>
+    <url>/2022/02/05/%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86%E5%85%A5%E9%97%A8/</url>
+    <content><![CDATA[<p>什么是以太网？</p>
+]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>基础知识</tag>
+        <tag>入门</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022/04/09/%E8%80%83%E7%A0%94%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a></h1><h1 id="考研总结"><a href="#考研总结" class="headerlink" title="考研总结"></a>考研总结</h1><h1 id="教训"><a href="#教训" class="headerlink" title="教训:"></a>教训:</h1><h3 id="努力程度远远不够-不自律"><a href="#努力程度远远不够-不自律" class="headerlink" title="努力程度远远不够,不自律"></a>努力程度远远不够,不自律</h3><h3 id="做了很多无用功"><a href="#做了很多无用功" class="headerlink" title="做了很多无用功"></a>做了很多无用功</h3><h3 id="自我认知不足"><a href="#自我认知不足" class="headerlink" title="自我认知不足."></a>自我认知不足.</h3><h3 id="客观因素"><a href="#客观因素" class="headerlink" title="客观因素"></a>客观因素</h3><h1 id="各个学科的情况"><a href="#各个学科的情况" class="headerlink" title="各个学科的情况:"></a>各个学科的情况:</h1><h2 id="数学"><a href="#数学" class="headerlink" title="数学:"></a>数学:</h2><h2 id="英语"><a href="#英语" class="headerlink" title="英语:"></a>英语:</h2><h2 id="专业课"><a href="#专业课" class="headerlink" title="专业课:"></a>专业课:</h2><h2 id="政治"><a href="#政治" class="headerlink" title="政治:"></a>政治:</h2>]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022/04/17/%E8%AE%BA%E6%96%87%E6%A0%BC%E5%BC%8F%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>论文格式：</p>
+<p><a href="https://www.bilibili.com/video/BV1cL4y177Ru?spm_id_from=333.337.search-card.all.click">https://www.bilibili.com/video/BV1cL4y177Ru?spm_id_from=333.337.search-card.all.click</a></p>
+<p>校内VPN：</p>
+<p><a href="https://webvpn.sdyu.edu.cn/https/77726476706e69737468656265737421f9fe458f69236c496b468ca88d1b203b/cas/login?service=https://webvpn.sdyu.edu.cn/login?cas_login=true#/">https://webvpn.sdyu.edu.cn/https/77726476706e69737468656265737421f9fe458f69236c496b468ca88d1b203b/cas/login?service=https%3A%2F%2Fwebvpn.sdyu.edu.cn%2Flogin%3Fcas_login%3Dtrue#/</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>高数基础-多元函数微分学</title>
+    <url>/2022/01/16/%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80-%E5%A4%9A%E5%85%83%E5%90%AB%E6%98%AF%E5%BE%AE%E5%88%86%E5%AD%A6/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022/02/17/%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>高数基础-无穷级数</title>
+    <url>/2022/01/16/%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80-%E6%97%A0%E7%A9%B7%E7%BA%A7%E6%95%B0/</url>
+    <content><![CDATA[]]></content>
+      <tags>
+        <tag>微积分</tag>
+      </tags>
   </entry>
 </search>
