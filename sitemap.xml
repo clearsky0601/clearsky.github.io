@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://clearsky0601.github.io/2022/03/06/web%E4%B8%AD%E7%9A%84%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BA%A4%E4%BA%92/</loc>
+    
+    <lastmod>2024-08-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://clearsky0601.github.io/2022/01/16/Untitled/</loc>
     
     <lastmod>2024-08-29</lastmod>
@@ -210,15 +219,6 @@
   
   <url>
     <loc>http://clearsky0601.github.io/2022/04/07/centos%E4%B8%8B%E8%BD%BDChrome%E6%B5%8F%E8%A7%88%E5%99%A8/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://clearsky0601.github.io/2022/03/06/web%E4%B8%AD%E7%9A%84%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BA%A4%E4%BA%92/</loc>
     
     <lastmod>2022-04-07</lastmod>
     
